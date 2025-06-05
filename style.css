@@ -4,6 +4,7 @@
     padding: 0;
     font-family: "Montserrat";
     box-sizing: border-box;
+    color: #000000;
 }
 
 h2 {
@@ -19,23 +20,63 @@ main {
     margin: 3rem 3rem 1rem 3rem;
 }
 
+.caminho a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    font-size: 16px;
+}
+
+.caminho {
+    margin: 1.5rem 3rem;
+}
+
+.caminho ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.caminho li {
+    display: flex;
+    align-items: center;
+}
+
+.caminho li + li::before {
+    content: ">";
+    margin-right: 1rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #8a5938;
+}
+
 input {
     border-radius: 5px;
     height: 2rem;
     padding: 20px 8px;
     border: 0.5px solid rgb(185, 185, 185);
+    width: 100%;
+}
+
+.linkSecundario {
+    color: #8a5938;
 }
 
 .linkSecundario:hover {
-    color: rgb(0, 61, 152) !important;
+    color: #000000 !important;
 }
 
+/* - ou - */
 .ouDivisor {
     font-size: 20px;
-    margin: 3rem 0;
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .ouDivisor::after, .ouDivisor::before {
@@ -46,40 +87,60 @@ input {
 }
 
 .botaoPrincipal {
-    height: 20px;
-    line-height: 20px;
-    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 2rem;
     cursor: pointer;
     font-weight: 600;
     border: none;
-    background-color: aqua;
-    font-size: 18px;
+    background-color: #8a593866;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1.2rem 0;
 }
 
-.linkIcone img {
-    max-width: 45px;
+.botaoPrincipal:hover {
+    background-color: #8a5938;
+    color: #ffffff;
+}
+
+.botao2 img {
+    max-width: 35px;
     width: 100%;
     height: auto;
 }
 
-.linkIcone {
+.botao2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
     text-decoration: none;
-    color: black;
-    font-size: 18px;
-    text-align: center;
-    
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin: 1.2rem 0;
+}
+
+.botao2:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* CABEÇALHOS */
 .semNav {
-    background-color: rgb(60, 16, 16);
+    background-color: #8a5938;
 }
 
 .semNav img {
     max-width: 85px;
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .semNav a {
@@ -89,47 +150,52 @@ input {
 
 /* FORMULÁRIOS */
 form input, label {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .conteudoForms {
     display: flex;
-    justify-content: center;
-    align-items: stretch;  /* deixa tudo com a mesma altura */
-    min-height: 100vh;
-    max-height: fit-content;
-    gap: 4rem;
+    width: fit-content;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    justify-self: center;
+    margin-bottom: 3rem;
 }
 
-.ilustracao {
-    width: fit-content;
+.ilustracao, .formsLogin {
+    display: flex;
+    max-width: 500px;
+    padding-right: 3rem;
 }
 
 .ilustracao img {
-    max-width: 800px;
+    border-radius: 10px 0 0 10px;
+    height: 100%;
     width: 100%;
-    height: auto;
-    border-radius: 5px;
+    object-fit: cover;
 }
 
-#formsLogin {
-    margin-top: 1rem;
-    display: flex;
+.formsLogin {
     flex-direction: column;
+    height: 100%;
+    align-items: flex-start;
 }
 
-#formsLogin fieldset {
+.formsLogin fieldset {
     border: none;
-    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 form h1, h2 {
     text-align: center;
     margin-bottom: 0.5rem;
+    width: 100%;
 }
 
 form h2 {
@@ -138,5 +204,44 @@ form h2 {
 
 #esqueciSenha {
     align-self: flex-end;
-    color: brown;
+}
+
+.alternativaEntrar {
+    width: 100%;
+    text-align: center;
+}
+
+#formsCadastro {
+    margin-right: 1rem;
+    margin-left: 3rem;
+    align-items: flex-end;
+    width: fit-content;
+}
+
+#ilustracao2 {
+    padding: 0;
+}
+
+#ilustracao2 img {
+    border-radius: 0 10px 10px 0;
+    max-height: 700px;
+}
+
+.formsLogin section {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+#formsCadastro input {
+    width: 100%;
+}
+
+.alert {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    background-color: #e6e6e6;
+    margin: 0 0 2rem 0;
+    font-size: 14px;
 }

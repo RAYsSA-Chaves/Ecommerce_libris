@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Cadastro</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/>  <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="semNav">
+        <a href="index.html">
+            <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        </a>
+    </header>
+
+    <!-- CAMINHO DA PÁGINA -->
+    <nav class="caminho">
+        <ul>
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="login.html" class="link">Login</a></li>
+            <li>Cadastro</li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoForms">
+        <form action="index2.html" class="formsLogin" id="formsCadastro">
+            <h1>Bem vindo(a)!</h1>
+            <h2>Crie uma conta</h2>
+            <p class="alert">
+                <img src="Midia/Icones/" alt="" aria-hidden="true"/>
+                Sua senha deve conter no mínimo 08 caracteres.
+            </p>
+            <section>
+                <fieldset>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Digite seu primeiro nome" required/>
+                </fieldset>
+                <fieldset>
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required/>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required/>
+                </fieldset>
+                <fieldset>
+                    <label for="cpf">CPF</label>
+                    <input type="text" minlength="14" name="cpf" placeholder="000.000.000-00" required/>
+                </fieldset>
+            </section>
+            <section>
+                <fieldset>
+                    <label for="senha">Senha</label>
+                    <input type="password" minlength="8" name="senha" placeholder="Crie uma senha" required/>
+                </fieldset>
+                <fieldset>
+                    <label for="confirmarSenha">Confirme a senha</label>
+                    <input type="password" minlength="8" name="confirmarSenha" placeholder="Digite a senha novamente" required/>
+                </fieldset>
+            </section>
+            <input type="submit" value="Cadastrar" class="botaoPrincipal"/>
+            <p class="ouDivisor">ou</p>
+            <a href="loginGoogle.html" class="botao2">Cadastre-se com o Google
+                <img src="Midia/Icones/google_icon.png" alt="Logo do Google"/>
+            </a>
+            <p class="alternativaEntrar">Já tem uma conta? <a href="login.html" class="linkSecundario">Acesse!</a></p>
+        </form>
+        <aside class="ilustracao" id="ilustracao2">
+            <img src="Midia/Ilustraçoes/img_fundo2.png" alt="Ilustração de menino em cima de uma pilha de livros e acenando"/>
+        </aside>
+    </main>
+</body>
+</html>
