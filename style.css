@@ -36,7 +36,7 @@ li {
 }
 
 .caminho {
-    margin: 1.5rem 3rem;
+    margin: 2rem 3rem;
 }
 
 .caminho ul {
@@ -85,6 +85,27 @@ li {
 
 .botaoPrincipal:hover {
     background-color: #8a5938;
+    color: #ffffff;
+}
+
+.botao2 {
+    background-color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin: 1.2rem 0;
+    cursor: pointer;
+}
+
+.botao2:hover {
+    background-color: #000000;
     color: #ffffff;
 }
 
@@ -205,7 +226,7 @@ select {
     margin-top: -150%;
 }
 
-/* Quando apertar o label da checkbox */ 
+/* Animação ao apertar o label da checkbox */ 
 input[type=checkbox]:checked + label .circle {
     left: 100%;
     transform: translate(-110%, -50%);
@@ -243,6 +264,7 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
     border-bottom: solid 2px #8a5938;
 }
 
+/* Menu supenso */
 #dropdownItem {
     position: relative;
 }
@@ -269,6 +291,7 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
     width: 250px;
 }
 
+/* Ícones do menu */
 .linkIcone img[alt="Configurações"] {
     max-width: 25px;
     max-height: 25px;
@@ -376,25 +399,6 @@ form h2 {
     height: auto;
 }
 
-.botao2 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 8px 16px;
-    text-decoration: none;
-    border: 1px solid;
-    border-radius: 10px;
-    font-size: 16px;
-    width: 100%;
-    margin: 1.2rem 0;
-}
-
-.botao2:hover {
-    background-color: #000000;
-    color: #ffffff;
-}
-
 .alternativaEntrar {
     width: 100%;
     text-align: center;
@@ -445,6 +449,20 @@ form h2 {
     align-self: center;
 }
 
+
+/* BANNER */
+.banner {
+    max-width: 99vw;
+    max-height: 100vh;
+    margin-bottom: 5rem;
+}
+
+.bannerImg {
+    width: 100%;
+    height: auto;
+}
+
+
 /* CONTEÚDOS EM FILEIRA - Cards */
 .seçoes h1 {
     margin-bottom: 3rem;
@@ -461,11 +479,12 @@ form h2 {
 }
 
 .fileiraCards {
-    max-width: 100%;
+    width: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
     gap: 5rem;
+    margin-bottom: 5rem;
 }
 
 .cardHorizontal {
@@ -473,6 +492,7 @@ form h2 {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
+    width: 100%;
 }
 
 .fileiraCards .cardCategoria {
@@ -500,22 +520,84 @@ form h2 {
     filter: brightness(80%);
 }
 
+.imgProduto {
+    display: block;
+}
+
 .imageBg {
     padding: 0 2rem 0 2rem;
     background-color: #e6e6e6;
     border-radius: 10px 10px 0 0;
+    position: relative;
 }
 
+/* Ícone de favorito */
+.favCheckbox {
+    display: none;
+}
+
+.heartIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-width: 25px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.circleBg {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff99;
+    border-radius: 50%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.heartIcon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s ease;
+}
+
+.heartIcon2 {
+    opacity: 0;
+}
+
+.favCheckbox:checked + .heartIcon .heartIcon2, .heartIcon:hover .heartIcon2 {
+    opacity: 1;
+}
+
+.favCheckbox:checked + .heartIcon .heartDefault, .heartIcon:hover .heartDefault {
+    opacity: 0;
+}
+/* --- */
+
 .cardProduto img {
-    min-width: 150px;
     max-width: 250px;
     width: 100%;
     height: auto;
 }
 
+.cardProduto {
+    width: fit-content;
+}
+
 .cardVertical {
-    max-width: 300px;
+    min-width: 230px;
+    max-width: 250px;
     width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+.cardVertical:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .conteudoCard {
@@ -526,12 +608,12 @@ form h2 {
 
 .cardVertical h2 {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     height: 60px;
 }
 
 .tag {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding: 5px;
     border: solid 2px #8a593866;
     width: fit-content;
@@ -539,23 +621,27 @@ form h2 {
     font-size: 14px;
 }
 
+.preço {
+    font-size: 18px;
+}
+
 .botoesAçao {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+}
+
+.botoesAçao button {
     width: 100%;
 }
 
-.botoesAçao .botao2 {
-    max-width: 200px;
-    width: 150px;
+.botoesAçao button:last-child {
+    max-width: fit-content;
 }
 
 .botoesAçao .botaoPrincipal {
     position: relative;
-    width: fit-content;
-    padding: 0 25px;
-    align-content: center;
-    margin-right: 15%;
 }
 
 .botoesAçao .botaoPrincipal img {
@@ -564,9 +650,10 @@ form h2 {
     height: auto;
     position: absolute;
     top: 25%;
-    left: 25%;
+    left: 30%;
 }
 
+/* Animação do botão de carrinho */
 .botoesAçao .botaoPrincipal .iconeBranco {
     display: none;
 }
@@ -579,10 +666,67 @@ form h2 {
     display: block;
 }
 
-.fileiraCards {
-    max-width: 100%;
-    justify-content: center;
+
+/* RODAPÉ */
+footer {
+    background-color: #8a5938;
+    padding: 30px 20rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5rem;
+    align-content: center;
+    text-align: center;
+}
+
+footer p, footer a {
+    color: #ffffff;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer img[alt="Logo da Libris"] {
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.bandeira {
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+
+footer .seçoes {
+    margin-bottom: 3rem;
+}
+
+footer > section:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.textoItalico {
+    font-style: italic;
+}
+
+footer .textoItalico {
+    margin: 1rem 0;
+}
+
+.fileiraBandeiras {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/* PÁGINAS COM COLUNAS - Ex: Produtos, carrinho */
+
+.mainColunas {
+    display: flex;
+    justify-content: space-between;
 }
