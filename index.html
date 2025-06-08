@@ -1,12 +1,153 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/>  <!-- importando a fonte -->
 </head>
 <body>
-    <h1>Bem-vindo(a)</h1>
-    <p>Integrador da Ray.</p>
+    <!-- CABEÇALHO -->
+    <header class="navegacao">
+        <!-- Parte 1 -->
+        <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
+            </a>
+            <!-- Barra de pesquisa -->
+            <form class="barraPesquisa" aria-label="Barra de pesquisa">
+                <input type="search" placeholder="Pesquise por um livro, autor, editora, entre outros" aria-label="Pesquise por livro, autor, editora, entre outros"/>
+                <button>
+                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                </button>
+            </form>
+            <!-- Seletor de idioma -->
+            <select aria-label="Escolha um idioma">
+                <option value="Português">&#x1f1e7; Português - BR</option>
+                <option value="Inglês">&#x1f1fa; English</option>
+                <option value="Espanhol">&#x1f1ea; Español</option>
+                <option value="Japonês">&#x1f1ef; 日本語</option>
+            </select>
+            <!-- Toggle de tema -->
+            <input type="checkbox" class="esconder" id="toggle"/>
+            <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
+                <div class="circle" aria-label="Ícone">
+                    <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
+                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon">
+                </div>
+            </label>
+        </div>
+        <!-- Parte 2 -->
+        <nav aria-label="Barra inferior com navegação">
+            <ul class="menu2">
+                <li id="itemAtivo" class="linkNav"><a href="index.html">Home</a></li>
+                <li class="linkNav" id="dropdownItem">Produtos
+                    <div class="dropdown" aria-label="Menu suspenso">
+                        <a href="livros.html">Livros</a>
+                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                    </div>
+                </li>
+                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
+                <li class="linkIcone">
+                    <a href="carrinho.html">
+                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon">
+                    </a>
+                </li>
+                <li class="linkIcone">
+                    <a href="config.html" >
+                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- Seção categorias -->
+        <section aria-label="Categorias" class="seçoes">
+            <h1>Categorias</h1>
+            <div class="fileiraCards">
+                <a href="livros.html" class="cardCategoria">
+                    <article class="cardHorizontal">
+                        <img src="Midia/Icones/livro_icon.png" alt="Ícone de livro" class="iconeCategoria"/>
+                        <p>Livros</p>
+                    </article>
+                </a>
+                <a href="quadrinhos.html" class="cardCategoria">
+                    <article  class="cardHorizontal">
+                        <img src="Midia/Icones/hq_icon.png" alt="Ícone de quadrinho" class="iconeCategoria"/>
+                        <p>Quadrinhos <br/>(HQs e Mangás)</p>
+                    </article>
+                </a>
+            </div>
+        </section>
+        <!-- Seção mais vendidos -->
+        <section aria-label="Livros mais vendidos" class="seçoes">
+            <h1>Mais vendidos</h1>
+            <div class="fileiraCards">
+                <a href="" class="cardProduto">
+                    <article class="cardVertical">
+                        <div class="imageBg">
+                            <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzantes"/>
+                        </div>
+                        <div class="conteudoCard">
+                            <h2>Asas Reluzentes</h2>
+                            <p class="tag">Livro</p>
+                            <p class="preço">R$ 75,90</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <a href="" class="botao2">Saber mais</a>
+                                <a href="" class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone do carrinho branco" class="iconeBranco"/>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="" class="cardProduto">
+                    <article class="cardVertical">
+                        <div class="imageBg">
+                            <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzantes"/>
+                        </div>
+                        <div class="conteudoCard">
+                            <h2>Asas Reluzentes</h2>
+                            <p class="tag">Livro</p>
+                            <p class="preço">R$ 75,90</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <a href="" class="botao2">Saber mais</a>
+                                <a href="" class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone do carrinho branco" class="iconeBranco">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+                <a href="" class="cardProduto">
+                    <article class="cardVertical">
+                        <div class="imageBg">
+                            <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzantes"/>
+                        </div>
+                        <div class="conteudoCard">
+                            <h2>Asas Reluzentes</h2>
+                            <p class="tag">Livro</p>
+                            <p class="preço">R$ 75,90</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <a href="" class="botao2">Saber mais</a>
+                                <a href="" class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone do carrinho branco" class="iconeBranco">
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

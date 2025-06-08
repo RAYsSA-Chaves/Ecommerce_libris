@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/>  <!-- importando a fonte -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <!-- CABEÇALHO -->
@@ -28,14 +27,15 @@
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="conteudoForms">
-        <form action="index2.html" class="formsLogin" id="formsCadastro">
+        <!-- Formulário -->
+        <form action="index2.html" class="formsLogin" id="formsCadastro" aria-label="Formulário de Cadastro">
             <h1>Bem vindo(a)!</h1>
             <h2>Crie uma conta</h2>
             <p class="alert">
                 <img src="Midia/Icones/alert_icon.svg" alt="Alerta" class="icon">
                 Sua senha deve conter no mínimo 08 caracteres.
             </p>
-            <section>
+            <section aria-label="Nome e sobrenome">
                 <fieldset>
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" placeholder="Digite seu primeiro nome" required/>
@@ -45,17 +45,17 @@
                     <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" required/>
                 </fieldset>
             </section>
-            <section>
+            <section aria-label="Email e CPF">
                 <fieldset>
                     <label for="email">E-mail</label>
                     <input type="email" name="email" placeholder="Digite seu e-mail" required/>
                 </fieldset>
                 <fieldset>
                     <label for="cpf">CPF (somente números)</label>
-                    <input type="text" minlength="14" name="cpf" placeholder="Digite seu CPF" required/>
+                    <input type="number" minlength="14" name="cpf" placeholder="Digite seu CPF" required/>
                 </fieldset>
             </section>
-            <section>
+            <section aria-label="Senha e confirmação da senha">
                 <fieldset>
                     <label for="senha">Senha</label>
                     <input type="password" minlength="8" name="senha" placeholder="Crie uma senha" required/>
@@ -72,8 +72,9 @@
             </a>
             <p class="alternativaEntrar">Já tem uma conta? <a href="login.html" class="linkSecundario">Acesse!</a></p>
         </form>
+        <!-- Ilustração -->
         <aside class="ilustracao" id="ilustracao2">
-            <img src="Midia/Ilustraçoes/img_fundo2.png" alt="Ilustração de menino em cima de uma pilha de livros e acenando"/>
+            <img src="Midia/Ilustraçoes/img_fundo2.png" alt="Ilustração de menino em cima de uma pilha de livros acenando"/>
         </aside>
     </main>
 </body>
