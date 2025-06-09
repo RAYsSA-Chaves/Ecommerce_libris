@@ -119,6 +119,10 @@ li {
     display: none;
 }
 
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 
 /* CABEÇALHOS */
 .semNav {
@@ -248,6 +252,7 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
 .linkNav {
     padding-bottom: 20px;
     height: 100%;
+    cursor: pointer;
 }
 
 .linkNav a {
@@ -449,6 +454,84 @@ form h2 {
     align-self: center;
 }
 
+/* Formulário do Google */
+#googlePage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f1f3f4;
+}
+
+#formsGoogle, #formsGoogle * {
+    font-family: "Inter" !important;
+}
+
+#formsGoogle {
+    padding: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+#logoGoogle {
+    max-width: 60px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.colunasForms {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#formsTexto h1{
+    margin-bottom: 15px;
+}
+
+#formsTexto #tituloSenha {
+    margin-bottom: 5px;
+}
+
+#formsTexto strong {
+    color:#1b6dd8;
+}
+
+.emailGoogle {
+    min-width: 23rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#googleBotao {
+    max-width: fit-content;
+    padding: 8px 20px 28px 20px;
+    border-radius: 20px;
+    background-color: #1b6dd8;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+}
+
+#googleBotao:hover {
+    background-color: #1055b6;
+}
+
+#campoGoogle {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: center;
+}
+
 
 /* BANNER */
 .banner {
@@ -632,45 +715,21 @@ form h2 {
     gap: 10px;
 }
 
-.botoesAçao button {
-    width: 100%;
-}
-
 .botoesAçao button:last-child {
     max-width: fit-content;
-}
-
-.botoesAçao .botaoPrincipal {
-    position: relative;
 }
 
 .botoesAçao .botaoPrincipal img {
     max-width: 25px;
     width: 100%;
     height: auto;
-    position: absolute;
-    top: 25%;
-    left: 30%;
-}
-
-/* Animação do botão de carrinho */
-.botoesAçao .botaoPrincipal .iconeBranco {
-    display: none;
-}
-
-.botoesAçao .botaoPrincipal:hover .iconeNormal {
-    display: none;
-}
-
-.botoesAçao .botaoPrincipal:hover .iconeBranco {
-    display: block;
 }
 
 
 /* RODAPÉ */
 footer {
     background-color: #8a5938;
-    padding: 30px 20rem;
+    padding: 30px 13rem;
     display: flex;
     flex-direction: column;
     align-items: center;
