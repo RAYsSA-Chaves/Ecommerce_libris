@@ -120,7 +120,17 @@ li {
 }
 
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -555,6 +565,10 @@ form h2 {
     margin-bottom: 8rem;
 }
 
+#seçaoProdutos {
+    margin-bottom: 1rem;
+}
+
 .fileiraCards .iconeCategoria {
     max-width: 250px;
     width: 100%;
@@ -684,7 +698,7 @@ form h2 {
 }
 
 .conteudoCard {
-    border: solid 3px #e6e6e6;
+    border: solid 3px #e1e1e1;
     border-radius: 0 0 10px 10px;
     padding: 10px;
 }
@@ -724,6 +738,104 @@ form h2 {
     width: 100%;
     height: auto;
 }
+
+
+/* FILTROS DE PRODUTOS */
+.filtros {
+    max-width: 400px;
+    width: 100%;
+    height: fit-content;
+}
+
+.cardsFiltros {
+    margin: 2rem 0;
+    width: 100%;
+    border-radius: 10px;
+    border: solid 2px #e6e6e6;
+    padding: 1rem;
+    text-align: left;
+}
+
+.cardsFiltros h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.cardsFiltros p {
+    align-self: center;
+}
+
+.filtrarPreço input {
+    max-width: 70px;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: #8a593866;
+    text-align: center;
+}
+
+.filtrarPreço {
+    display: flex;
+    gap: 3rem;
+}
+
+.campoPreço {
+    display: flex;
+    gap: 2rem;
+}
+
+.cardsFiltros label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.cardsFiltros label img {
+    margin-left: auto;
+}
+
+.cardsFiltros input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    accent-color: #8a5938;
+}
+
+.filtrarGenero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardsFiltros .barraPesquisa input[type="search"] {
+    min-width: 350px;
+    width: 100%;
+}
+
+.cardsFiltros .barraPesquisa button {
+    right: -170px;
+}
+
+
+
+
+
+.navPag {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+
+
 
 
 /* RODAPÉ */

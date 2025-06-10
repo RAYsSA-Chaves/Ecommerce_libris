@@ -76,12 +76,151 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="mainColunas">
         <!-- Filtros -->
-        <aside>
+        <aside class="filtros">
             <h1>Filtrar por</h1>
+            <!-- Preço -->
+            <section class="cardsFiltros">
+                <h2>Preço</h2>
+                <form class="filtrarPreço">
+                    <fieldset class="campoPreço">
+                        <p>de R$</p>
+                        <input type="number" step="0.01" min="0" placeholder="-"/>
+                    </fieldset>
+                    <fieldset class="campoPreço">
+                    <p>até R$</p>
+                        <input type="number" step="0.01" min="0" placeholder="-"/>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Gênero -->
+            <section class="cardsFiltros">
+                <h2>Gêneros</h2>
+                <form class="filtrarGenero">
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Ficção
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Romance
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Suspense
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Aventura
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Ação
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Fantasia
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Drama
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Horror
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Humor
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Infantil
+                        </label>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Editora -->
+            <section class="cardsFiltros">
+                <h2>Editora</h2>
+                <form class="barraPesquisa" aria-label="Barra de pesquisa">
+                <input type="search" placeholder="Pesquise por uma editora" aria-label="Pesquise por livro, autor, editora, entre outros"/>
+                <button>
+                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                </button>
+            </form>
+            </section>
+            <!-- Disponibilidade -->
+            <section class="cardsFiltros">
+                <h2>Disponibilidade</h2>
+                <label>
+                    <input type="checkbox"/>
+                    Em estoque
+                </label>
+            </section>
+            <!-- Idioma -->
+            <section class="cardsFiltros">
+                <h2>Idioma</h2>
+                <form class="filtrarGenero">
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Português - BR
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Inglês
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Espanhol
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Braile
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Japonês
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Mandarim
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Francês
+                        </label>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Classificação indicativa -->
+            <section class="cardsFiltros">
+                <h2>Classificação indicativa</h2>
+                <label>
+                    <input type="checkbox"/>
+                    Livre para todas as idades
+                    <img src="Midia/Icones/classificaçaoL.png" alt="Ícone de classificação livre" class="icon"/>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Não recomendado para menores de 14 anos
+                    <img src="Midia/Icones/classificaçao14.png" alt="Ícone de classificação livre" class="icon"/>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Não recomendado para menores de 18 anos
+                    <img src="Midia/Icones/classificaçao18.png" alt="Ícone de classificação livre" class="icon"/>
+                </label>
+            </section>
         </aside>
 
         <!-- Seção com os livros -->
-        <section aria-label="Produtos" class="seçoes">
+        <section aria-label="Produtos" class="seçoes" id="seçaoProdutos">
             <!-- Fileira 1 -->
             <div class="fileiraCards">
                 <!-- Card 1 -->
@@ -94,18 +233,16 @@
                             <label for="favorito" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do prduto">
                             <h2>Asas Reluzentes</h2>
-                            <p class="tag">Livro</p>
                             <p class="preço">R$ 75,90</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -121,18 +258,16 @@
                             <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>Invencível, vol. 1</h2>
-                            <p class="tag">HQ</p>
                             <p class="preço">R$ 19,99</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -142,24 +277,22 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_assimQueAcaba2.jpg" alt="Livro É Assim que Acaba" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_assimQueAcaba.jpg" alt="Livro É Assim que Acaba" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito2" class="favCheckbox"/>
                             <label for="favorito2" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>É Assim que Acaba, vol. 1 + marcador de página</h2>
-                            <p class="tag">Livro</p>
                             <p class="preço">R$ 42,80</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -179,18 +312,16 @@
                             <label for="favorito3" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>A Biblioteca da Meia Noite</h2>
-                            <p class="tag">Livro</p>
                             <p class="preço">R$ 40,00</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -206,18 +337,16 @@
                             <label for="favorito4" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>Watchmen, Edição Definitiva</h2>
-                            <p class="tag">HQ</p>
                             <p class="preço">R$ 250,69</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -234,18 +363,16 @@
                             <label for="favorito5" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido " class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido " class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>Deadpool Massacra o Universo Marvel</h2>
-                            <p class="tag">HQ</p>
                             <p class="preço">R$ 65,99</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -265,18 +392,16 @@
                             <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>Box Jujutsu Kaisen, vol. 1 ao 3</h2>
-                            <p class="tag">HQ</p>
                             <p class="preço">R$ 106,88</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -292,18 +417,16 @@
                             <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>Amor e Gelato, vol. 1</h2>
-                            <p class="tag">Livro</p>
                             <p class="preço">R$ 40,00</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
                                 </button>
                             </div>
                         </div>
@@ -319,18 +442,95 @@
                             <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heat_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
                             <h2>A Metamorfose</h2>
-                            <p class="tag">Livro</p>
                             <p class="preço">R$ 39,50</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <button class="botaoPrincipal">
                                     <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
-                                    <img src="Midia/Icones/add_icon.svg" alt="Ícone de carrinho" class="iconeBranco"/>
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Fileira 4 -->
+            <div class="fileiraCards">
+                <!-- Card 1 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/manga_jujutsuKaisen.jpg" alt="Box Jujutsu Kaisen, vol. 1 ao 3" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito6" class="favCheckbox"/>
+                            <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Box Jujutsu Kaisen, vol. 1 ao 3</h2>
+                            <p class="preço">R$ 106,88</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 2 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/livro_amorGelato.jpg" alt="Livro Amor e Gelato, vol. 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito7" class="favCheckbox"/>
+                            <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Amor e Gelato, vol. 1</h2>
+                            <p class="preço">R$ 40,00</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 3 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/livro_aMetamorfose.jpg" alt="Livro A Metamorfose" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito8" class="favCheckbox"/>
+                            <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>A Metamorfose</h2>
+                            <p class="preço">R$ 39,50</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
                                 </button>
                             </div>
                         </div>
@@ -339,6 +539,17 @@
             </div>
         </section>
     </main>
+
+    <!-- PAGINAÇÃO -->
+    <nav aria-label="Navegação de páginas" class="navPag">
+        <button>
+            <img src="Midia/Icones/arrow_icon2.svg" alt="Página anterior">
+        </button>
+        <p>01</p>
+        <button>
+            <img src="Midia/Icones/arrow_icon3.svg" alt="Próxima página">
+        </button>
+    </nav>
 
     <!-- RODAPÉ -->
     <footer>
