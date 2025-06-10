@@ -35,37 +35,13 @@ li {
     font-size: 16px;
 }
 
-.caminho {
-    margin: 2rem 3rem;
-}
-
-.caminho ul {
-    display: flex;
-    gap: 1rem;
-}
-
-.caminho li {
-    display: flex;
-    align-items: center;
-}
-
-.caminho li + li::before {
-    content: ">";
-    margin-right: 1rem;
-}
-
-.link:hover {
-    text-decoration: underline;
-    color: #8a5938;
-}
-
 .linkSecundario {
     color: #8a5938;
     text-decoration: underline;
 }
 
 .linkSecundario:hover {
-    color: #000000 !important;
+    color: #000000;
 }
 
 .botaoPrincipal {
@@ -115,10 +91,6 @@ li {
     height: auto;
 }
 
-.esconder {
-    display: none;
-}
-
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
@@ -131,6 +103,32 @@ button {
     background-color: #ffffff;
     border: none;
     cursor: pointer;
+}
+
+
+/* CAMINHO DA PÁGINA */
+.caminho {
+    margin: 2rem 3rem;
+}
+
+.caminho ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.caminho li {
+    display: flex;
+    align-items: center;
+}
+
+.caminho li + li::before {
+    content: ">";
+    margin-right: 1rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #8a5938;
 }
 
 
@@ -201,6 +199,10 @@ select {
 }
 
 /* Toggle do tema */
+.esconder {
+    display: none;
+}
+
 .slider {
     width: 70px;
     height: 30px;
@@ -240,7 +242,7 @@ select {
     margin-top: -150%;
 }
 
-/* Animação ao apertar o label da checkbox */ 
+/* Animação do toggle */ 
 input[type=checkbox]:checked + label .circle {
     left: 100%;
     transform: translate(-110%, -50%);
@@ -258,7 +260,7 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
     margin-top: -1%;
 }
 
-/* Links navegáveis */
+/* Links navegáveis do menu */
 .linkNav {
     padding-bottom: 20px;
     height: 100%;
@@ -326,7 +328,7 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
 }
 
 
-/* FORMULÁRIOS */
+/* FORMULÁRIOS  DE LOGIN E CADASTRO*/
 input {
     border-radius: 5px;
     height: 2rem;
@@ -557,6 +559,12 @@ form h2 {
 
 
 /* CONTEÚDOS EM FILEIRA - Cards */
+.mainColunas {
+    display: flex;
+    justify-content: space-between;
+    gap: min(3rem);
+}
+
 .seçoes h1 {
     margin-bottom: 3rem;
 }
@@ -567,6 +575,8 @@ form h2 {
 
 #seçaoProdutos {
     margin-bottom: 1rem;
+    max-width: 1300px;
+    width: 100%;
 }
 
 .fileiraCards .iconeCategoria {
@@ -581,6 +591,14 @@ form h2 {
     display: flex;
     align-items: center;
     gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.fileiraCards2 {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
     margin-bottom: 5rem;
 }
 
@@ -626,62 +644,6 @@ form h2 {
     background-color: #e1e1e1;
     border-radius: 10px 10px 0 0;
     position: relative;
-}
-
-/* Ícone de favorito */
-.favCheckbox {
-    display: none;
-}
-
-.heartIcon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    max-width: 25px;
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-}
-
-.circleBg {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    background-color: #ffffff99;
-    border-radius: 50%;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-}
-
-.heartIcon img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.2s ease;
-}
-
-.heartIcon2 {
-    opacity: 0;
-}
-
-.favCheckbox:checked + .heartIcon .heartIcon2, .heartIcon:hover .heartIcon2 {
-    opacity: 1;
-}
-
-.favCheckbox:checked + .heartIcon .heartDefault, .heartIcon:hover .heartDefault {
-    opacity: 0;
-}
-/* --- */
-
-.cardProduto img {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
-}
-
-.cardProduto {
-    width: fit-content;
 }
 
 .cardVertical {
@@ -735,6 +697,62 @@ form h2 {
 
 .botoesAçao .botaoPrincipal img {
     max-width: 25px;
+    width: 100%;
+    height: auto;
+}
+
+.cardProduto {
+    width: fit-content;
+}
+
+/* Ícone de favorito */
+.favCheckbox {
+    display: none;
+}
+
+.heartIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-width: 25px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.circleBg {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff99;
+    border-radius: 50%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.heartIcon img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.2s ease;
+}
+
+.heartIcon2 {
+    opacity: 0;
+}
+
+.favCheckbox:checked + .heartIcon .heartIcon2, .heartIcon:hover .heartIcon2 {
+    opacity: 1;
+}
+
+.favCheckbox:checked + .heartIcon .heartDefault, .heartIcon:hover .heartDefault {
+    opacity: 0;
+}
+/* --- */
+
+.cardProduto img {
+    max-width: 250px;
     width: 100%;
     height: auto;
 }
@@ -818,10 +836,6 @@ form h2 {
     right: -170px;
 }
 
-
-
-
-
 .navPag {
     display: flex;
     gap: 8px;
@@ -829,13 +843,6 @@ form h2 {
     justify-content: center;
     margin-bottom: 5rem;
 }
-
-
-
-
-
-
-
 
 
 /* RODAPÉ */
@@ -892,12 +899,4 @@ footer .textoItalico {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-
-/* PÁGINAS COM COLUNAS - Ex: Produtos, carrinho */
-
-.mainColunas {
-    display: flex;
-    justify-content: space-between;
 }
