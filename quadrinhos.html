@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Produtos - Quadrinhos</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="navegacao">
+        <!-- Parte 1 -->
+        <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
+            </a>
+            <!-- Barra de pesquisa -->
+            <form class="barraPesquisa" aria-label="Barra de pesquisa">
+                <input type="search" placeholder="Pesquise por um livro, autor, editora, entre outros" aria-label="Pesquise por livro, autor, editora, entre outros"/>
+                <button>
+                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                </button>
+            </form>
+            <!-- Seletor de idioma -->
+            <select aria-label="Escolha um idioma">
+                <option value="Português">&#x1f1e7; Português - BR</option>
+                <option value="Inglês">&#x1f1fa; English</option>
+                <option value="Espanhol">&#x1f1ea; Español</option>
+                <option value="Japonês">&#x1f1ef; 日本語</option>
+            </select>
+            <!-- Toggle de tema -->
+            <input type="checkbox" class="esconder" id="toggle"/>
+            <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
+                <div class="circle" aria-label="Ícone de sol/lua">
+                    <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
+                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon">
+                </div>
+            </label>
+        </div>
+        <!-- Parte 2 -->
+        <nav aria-label="Barra inferior com navegação">
+            <ul class="menu2">
+                <li class="linkNav"><a href="index.html">Home</a></li>
+                <li class="linkNav" id="dropdownItem">Produtos
+                    <div class="dropdown" aria-label="Menu suspenso">
+                        <a href="livros.html">Livros</a>
+                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                    </div>
+                </li>
+                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
+                <li class="linkIcone">
+                    <a href="carrinho.html">
+                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon">
+                    </a>
+                </li>
+                <li class="linkIcone">
+                    <a href="config.html">
+                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CAMINHO DA PÁGINA -->
+    <nav class="caminho">
+        <ul>
+            <li><a href="index.html" class="link">Home</a></li>
+            <li>Livros</li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="mainColunas">
+        <!-- Filtros -->
+        <aside class="filtros">
+            <h1>Filtrar por</h1>
+            <!-- Preço -->
+            <section class="cardsFiltros">
+                <h2>Preço</h2>
+                <form class="filtrarPreço">
+                    <fieldset class="campoPreço">
+                        <p>de R$</p>
+                        <input type="number" step="0.01" min="0" placeholder="-"/>
+                    </fieldset>
+                    <fieldset class="campoPreço">
+                    <p>até R$</p>
+                        <input type="number" step="0.01" min="0" placeholder="-"/>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Categoria -->
+            <section class="cardsFiltros">
+                <h2>Categoria</h2>
+                <label>
+                    <input type="checkbox"/>
+                    HQs
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Mangás
+                </label>
+            </section>
+            <!-- Gênero -->
+            <section class="cardsFiltros">
+                <h2>Gêneros</h2>
+                <form class="filtrarGenero">
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Ficção
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Romance
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Suspense
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Aventura
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Ação
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Fantasia
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Drama
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Horror
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Humor
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Infantil
+                        </label>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Editora -->
+            <section class="cardsFiltros">
+                <h2>Editora</h2>
+                <form class="barraPesquisa" aria-label="Barra de pesquisa">
+                    <input type="search" placeholder="Pesquise por uma editora" aria-label="Pesquise por livro, autor, editora, entre outros"/>
+                    <button>
+                        <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                    </button>
+                </form>
+            </section>
+            <!-- Disponibilidade -->
+            <section class="cardsFiltros">
+                <h2>Disponibilidade</h2>
+                <label>
+                    <input type="checkbox"/>
+                    Em estoque
+                </label>
+            </section>
+            <!-- Idioma -->
+            <section class="cardsFiltros">
+                <h2>Idioma</h2>
+                <form class="filtrarGenero">
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Português - BR
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Inglês
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Espanhol
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Braile
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Japonês
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input type="checkbox"/>
+                            Mandarim
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            Francês
+                        </label>
+                    </fieldset>
+                </form>
+            </section>
+            <!-- Classificação indicativa -->
+            <section class="cardsFiltros">
+                <h2>Classificação indicativa</h2>
+                <label>
+                    <input type="checkbox"/>
+                    Livre para todas as idades
+                    <img src="Midia/Icones/classificaçaoL.png" alt="Ícone de classificação livre" class="icon"/>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Não recomendado para menores de 14 anos
+                    <img src="Midia/Icones/classificaçao14.png" alt="Ícone de classificação livre" class="icon"/>
+                </label>
+                <label>
+                    <input type="checkbox"/>
+                    Não recomendado para menores de 18 anos
+                    <img src="Midia/Icones/classificaçao18.png" alt="Ícone de classificação livre" class="icon"/>
+                </label>
+            </section>
+        </aside>
+
+        <!-- Seção com os livros -->
+        <section aria-label="Produtos" class="seçoes" id="seçaoProdutos">
+            <!-- Fileira 1 -->
+            <div class="fileiraCards2">
+                <!-- Card 1 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_watchmen.jpg" alt="HQ Watchmen, Edição Definitiva" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito" class="favCheckbox"/>
+                            <label for="favorito" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do prduto">
+                            <h2>Watchmen, Edição Definitiva</h2>
+                            <p class="preço">R$ 250,69</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 2 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_invencivel.jpg" alt="HQ Invencível, volume 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito1" class="favCheckbox"/>
+                            <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Invencível, vol. 1</h2>
+                            <p class="preço">R$ 19,99</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 3 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_deadpool.jpg" alt="HQ Deadpool Massacra o Universo Marvel" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito2" class="favCheckbox"/>
+                            <label for="favorito2" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Deadpool Massacra o Universo Marvel</h2>
+                            <p class="preço">R$ 65,99</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Fileira 2 -->
+            <div class="fileiraCards2">
+                <!-- Card 1 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/manga_jujutsuKaisen.jpg" alt="Box Jujutsu Kaisen, volume 0 ao 3" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito3" class="favCheckbox"/>
+                            <label for="favorito3" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Box Jujutsu Kaisen, vol. 0 ao 3</h2>
+                            <p class="preço">R$ 106,88</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 2 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/box_onePiece.jpg" alt="Box One Piece, volume 1 ao 23" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito4" class="favCheckbox"/>
+                            <label for="favorito4" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Box One Piece, vol. 1 ao 23</h2>
+                            <p class="preço">R$ 998,90</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_guerrasSecretas.jpg" alt="HQ Guerras Secretas, volume 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito5" class="favCheckbox"/>
+                            <label for="favorito5" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido " class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>HQ Guerras Secretas, vol. 1</h2>
+                            <p class="preço">R$ 35,00</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Fileira 3 -->
+            <div class="fileiraCards2">
+                <!-- Card 1 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/manga_tokyoRevengers.jpg" alt="Mangá Tokyo Revengers, volume 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito6" class="favCheckbox"/>
+                            <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Tokyo Revengers, vol. 1</h2>
+                            <p class="preço">R$ 32,29</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 2 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_kickAss.jpg" alt="HQ Kick Ass, volume 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito7" class="favCheckbox"/>
+                            <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Kick Ass, vol. 1</h2>
+                            <p class="preço">R$ 45,00</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 3 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_piadaMortal.jpg" alt="HQ Batman - A Piada Mortal" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito8" class="favCheckbox"/>
+                            <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Batman - A Piada Mortal</h2>
+                            <p class="preço">R$ 31,68</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Fileira 4 -->
+            <div class="fileiraCards2">
+                <!-- Card 1 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/hq_batmanAbsolute.jpg" alt="HQ Batman Absolute, volume 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito6" class="favCheckbox"/>
+                            <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Batman Absolute, vol. 1</h2>
+                            <p class="preço">R$ 110,56</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 2 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/box_spyXfamily.jpg" alt="Box Spy X Family, volume 1 ao 4" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito7" class="favCheckbox"/>
+                            <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Box Spy X Family, vol. 1 ao 4</h2>
+                            <p class="preço">R$ 95,35</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <!-- Card 3 -->
+                <article class="cardVertical">
+                    <a href="" class="cardProduto">
+                        <div class="imageBg" aria-label="Imagem do produto">
+                            <img src="Midia/Produtos/manga_onePunchMan.png" alt="Mangá One Punch Man, volume 1" class="imgProduto"/>
+                            <!-- Ícone de favorito -->
+                            <input type="checkbox" id="favorito8" class="favCheckbox"/>
+                            <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                                <span class="circleBg"></span>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                            </label>
+                        </div>
+                        <div class="conteudoCard" aria-label="Informações do produto">
+                            <h2>Mangá One Punch Man, vol. 1</h2>
+                            <p class="preço">R$ 36,90</p>
+                            <div aria-label="Seção com botões" class="botoesAçao">
+                                <button class="botao2">Saber mais</button>
+                                <button class="botaoPrincipal">
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- PAGINAÇÃO -->
+    <nav aria-label="Navegação de páginas" class="navPag">
+        <button>
+            <img src="Midia/Icones/arrow_icon2.svg" alt="Página anterior">
+        </button>
+        <p>01</p>
+        <button>
+            <img src="Midia/Icones/arrow_icon3.svg" alt="Próxima página">
+        </button>
+    </nav>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        <section class="seçoes" aria-label="Links úteis">
+            <a href="">Sobre Nós</a>
+            <a href="">Suporte e Ajuda</a>
+            <a href="">Políticas de Devolução</a>
+            <a href="">Políticas de Privacidade</a>
+        </section>
+        <section class="seçoes">
+            <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
+            <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
+                <img src="Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+            </div>
+        </section>
+        <p>2025 Libris. Todos os Direitos Reservados.</p>
+        <br/><br/>
+        <p>Desenvolvido por Rayssa Chaves.</p>
+    </footer>
+</body>
+</html>
