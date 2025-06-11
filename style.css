@@ -705,6 +705,10 @@ form h2 {
     width: fit-content;
 }
 
+button[class="botao2"] {
+    padding: 13px 16px;
+}
+
 /* Ícone de favorito */
 .favCheckbox {
     display: none;
@@ -848,7 +852,9 @@ form h2 {
 /* PÁGINA DE PRODUTO ESPECÍFICO */
 #produtoResumo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 5rem;
 }
 
 #imagens {
@@ -864,6 +870,162 @@ form h2 {
     max-width: 200px;
     width: 100%;
     height: auto;
+}
+
+#imagens img {
+    border-radius: 5px;
+}
+
+#imagemMaior {
+    width: 500px;
+    height: auto;
+}
+
+#imagensNav img:first-child {
+    border: solid 3px #8a5938;
+}
+
+#infosResumo {
+    max-width: 400px;
+    width: 100%;
+}
+
+.tag2 {
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #000000;
+    font-size: 14px;
+    width: fit-content;
+}
+
+#infosResumo h1 {
+    font-size: 25px;
+}
+
+#textoClaro {
+    color: #525252;
+}
+
+#consultaCep input {
+    min-width: 350px;
+    width: 100%;
+    outline: none;
+    border: solid 2px #8a593866;
+}
+
+#consultaCep button {
+    color: #ffffff;
+    right: -145px;
+    top: 50%;
+    padding: 0.5rem 10px;
+    border-radius: 5px;
+}
+
+.textoBg {
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #dcdcdc;
+    width: fit-content;
+}
+
+.textoDisplay {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.qtd {
+    display: flex;
+    gap: 10px;
+    border: solid 1px #000000;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.qtd input {
+    width: 50px;
+    text-align: center;
+    outline: none;
+    border-left: solid 1px #000000;
+    border-right: solid 1px #000000;
+    border-radius: 0;
+}
+
+.qtd button {
+    padding: 0 10px;
+}
+
+#infosResumo .botaoPrincipal {
+    max-width: 350px;
+    width: 100%;
+}
+
+#infosResumo > * {
+    margin-bottom: 10px;
+}
+
+#infosProduto p, h1 {
+    width: fit-content;
+}
+
+#infosResumo {
+    position: relative;
+}
+
+#infosResumo .heartIcon {
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+}
+
+#infosResumo .favCheckbox:checked + .heartIcon .heartIcon2, .heartIcon:hover .heartIcon2 {
+    opacity: 1;
+}
+
+#infosResumo .favCheckbox:checked + .heartIcon .heartDefault, .heartIcon:hover .heartDefault {
+    opacity: 0;
+}
+
+.containerDropdown {
+    margin: 5rem auto;
+}
+
+.dropdownLabel {
+    cursor: pointer;
+}
+
+.dropdownToggle {
+    display: none;
+}
+
+.dropCabeçalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropCabeçalho h2 {
+    width: fit-content;
+}
+
+.dropdownContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdownToggle:checked ~.dropdownContent {
+    min-height: 50px;
+    padding: 10px;
+}
+
+.dropdownToggle + .dropdownLabel .icon {
+    transition: transform 0.3s ease;
+}
+
+.dropdownToggle:checked + .dropdownLabel .icon {
+    transform: rotate(180deg);
 }
 
 

@@ -77,16 +77,58 @@
     <!-- CONTEÚDO PRINCIPAL -->
     <main>
         <!-- Resumo do produto -->
-        <section id="produtoResumo" aria-label="Imagens do produto">
-            <section id="imagens">
-                <section id="imagensNav">
+        <section id="produtoResumo" aria-label="Resumo do produto">
+            <section id="imagens" aria-label="Imagens do produto">
+                <div id="imagensNav">
                     <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem 1"/>
                     <img src="Midia/Produtos/livro_asasReluzentes2.png" alt="Imagem 2"/>
-                </section>
-                <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem da capa do livro Asas Reluzentes"/>
+                </div>
+                <img id="imagemMaior" src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem da capa do livro Asas Reluzentes"/>
             </section>
-            <h1>Asas Reluzentes</h1>
-         </section>
+            <section id="infosResumo" aria-label="Informações do produto">
+                <input type="checkbox" id="favorito1" class="favCheckbox"/>
+                <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                    <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                    <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                </label>
+                <p class="tag2">+1000 vendidos</p>
+                <h1>Asas Reluzentes</h1>
+                <p class="preço">R$ 75,90</p>
+                <p id="textoClaro">385 em estoque</p>
+                <form class="barraPesquisa" id="consultaCep" aria-label="Consultar frete">
+                    <input type="number" min="8" max="8" placeholder="Digite seu CEP" aria-label="Digite seu CEP e consulte o frete"/>
+                    <button>Consultar frete</button>
+                </form>
+                <p>Frete: R$ 00,00</p>
+                <div class="textoDisplay">
+                    <p>Valor com frete:</p>
+                    <p class="textoBg">R$ 75,90</p>
+                </div>
+                <div class="textoDisplay" aria-label="Quantidade do produto">
+                    <p>Quantidade:</p>
+                    <div class="qtd">
+                        <button>-</button>
+                        <input type="number" value="1" min="1"/>
+                        <button>+</button>
+                    </div>
+                    <p class="textoBg">R$ 75,90</p>
+                </div>
+                <button class="botaoPrincipal">Adicionar ao carrinho</button>
+            </section>
+        </section>
+        <section aria-label="Sinopse" class="containerDropdown">
+            <input type="checkbox" name="dropdownToggle" id="dropdownToggle" class="dropdownToggle"/>
+            <label for="dropdownToggle" class="dropdownLabel">
+                <div class="dropCabeçalho">
+                    <h2>Sinopse</h2>
+                    <img src="Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
+                </div>
+                <hr/>
+            </label>
+            <div class="dropdownContent">
+                <p>Oi</p>
+            </div>
+        </section>
     </main>
 
 <!-- RODAPÉ -->
