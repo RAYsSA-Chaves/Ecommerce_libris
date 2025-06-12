@@ -1010,14 +1010,18 @@ button[class="botao2"] {
 }
 
 .dropdownContent {
-    max-height: 0;
-    overflow: hidden;
+    display: none;
     transition: max-height 0.3s ease;
 }
 
 .dropdownToggle:checked ~.dropdownContent {
-    min-height: 50px;
+    display: block;
     padding: 10px;
+    padding-top: 20px;
+}
+
+.dropdownContent p {
+    margin-bottom: 1rem;
 }
 
 .dropdownToggle + .dropdownLabel .icon {
@@ -1026,6 +1030,47 @@ button[class="botao2"] {
 
 .dropdownToggle:checked + .dropdownLabel .icon {
     transform: rotate(180deg);
+}
+
+/* Tabela */
+.fichaTecnica {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.linhaBranca td:first-child, .linhaCinza td:first-child {
+    text-align: left;
+}
+
+.linhaBranca td:last-child, .linhaCinza td:last-child {
+    text-align: right;
+}
+
+.linhaBranca, .linhaCinza {
+    height: 60px;
+}
+
+.linhaBranca td, .linhaCinza td {
+    padding: 10px;
+}
+
+.linhaBranca {
+    background-color: #ffffff;
+}
+
+.linhaBranca td:first-child {
+    border-left: 2px solid #e6e6e6;
+}
+
+.linhaBranca td:last-child {
+    border-right: 2px solid #e6e6e6;
+}
+
+.linhaCinza {
+    background-color: #e6e6e6;
 }
 
 
