@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Redefinir Senha</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="semNav">
+        <a href="index.html">
+            <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        </a>
+    </header>
+
+    <!-- CAMINHO DA PÁGINA -->
+    <nav class="caminho">
+        <ul>
+            <li><a href="login.html" class="link">< Cancelar</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="formRedefinicao">
+        <img src="Midia/Ilustraçoes/senha_ilustraçao.png" alt="Ilustração de uma menina com muitos livros e corações"/>
+        <!-- Formulário -->
+        <form action="redef_senha2.html" aria-label="Formulário de Login">
+            <h1>Redefinir senha</h1>
+            <p>Informe o e-mail para o qual a senha precisa ser redefinida.</p>
+            <fieldset>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required/>
+            </fieldset>
+            <input type="submit" value="Continuar" class="botaoPrincipal"/>
+        </form>
+    </main>
+</body>
+</html>
