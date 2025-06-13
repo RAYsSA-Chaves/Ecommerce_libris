@@ -544,6 +544,35 @@ form h2 {
     align-self: center;
 }
 
+/* Formulário para redefinição de senha */
+.formRedefinicao {
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin: 5rem auto;
+    padding: 0 50px 20px 50px;
+}
+
+.formRedefinicao img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.formRedefinicao h1 {
+    margin-bottom: 2rem;
+}
+
+.formRedefinicao p {
+    margin-bottom: 2rem;
+}
+
+.formRedefinicao fieldset {
+    align-items: left;
+}
+
 
 /* BANNER */
 .banner {
