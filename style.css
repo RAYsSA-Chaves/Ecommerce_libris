@@ -1073,6 +1073,125 @@ button[class="botao2"] {
     background-color: #e6e6e6;
 }
 
+/* Avaliações */
+.divSeçoes {
+    display: flex;
+    width: fit-content;
+}
+
+.divSeçoes h2 {
+    padding: 10px;
+    margin: 0 1rem 0 1rem;
+    width: 230px;
+}
+
+.divSeçoes h2:first-child {
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 10px 10px 0 0;
+}
+
+.divSeçoes h2:last-child {
+    border: solid 1px #000000;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.tituloMaior {
+    font-size: 1.5rem;
+}
+
+#filtroAv *{
+    margin-bottom: 1rem;
+}
+
+.display1 {
+    display: flex;
+    gap: 5px
+}
+
+.display1 p {
+    margin-left: 1rem;
+}
+
+#filtroAv .botaoPrincipal {
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#filtroAv {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+#filtroAv label * {
+    margin: 0;
+}
+
+#filtroAv section {
+    margin-bottom: 0;
+}
+
+.mediaAv {
+    text-align: center;
+}
+
+.mediaAv * {
+    margin-bottom: 1rem;
+}
+
+.mediaAv p:last-of-type {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.userFoto {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.display2 {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display3 {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.display3 p {
+    margin-bottom: 1rem;
+}
+
+.display2 p {
+    margin: 1rem 0;
+    max-width: 1150px;
+}
+
+.produtoAv {
+    max-width: 210px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.separador {
+    margin: 1rem 0 1rem 0;
+}
+
+.verMais{
+    text-align: center;
+    text-decoration: underline;
+    margin: 5rem 0;
+}
+
 
 /* RODAPÉ */
 footer {

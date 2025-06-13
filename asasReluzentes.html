@@ -199,65 +199,75 @@
             </div>
         </section>
 
+        <!-- Avaliações e dúvidas -->
         <section aria-label="Avaliações e dúvidas">
-            <div>
-                <h2>Avaliações</h2>
-                <h2>Dúvidas</h2>
+            <div class="divSeçoes">
+                <h2>Avaliações (556)</h2>
+                <h2>Dúvidas (2)</h2>
             </div>
-            <hr>
-            <aside class="filtros">
-                <h1>Filtrar por</h1>
-                <section class="cardsFiltros">
-                    <div>
+            <hr/>
+            <aside class="cardsFiltros" id="filtroAv">
+                <div>
+                    <h1 class="tituloMaior">Filtrar por</h1>
+                    <section>
                         <p>Quantidade de estrelas</p>
-                        <div>
-                            <img src="Midia/Icones/star" alt="Uma estrela"/>
-                            <img src="Midia/Icones/star" alt="Duas estrelas"/>
-                            <img src="Midia/Icones/star" alt="Três estrelas"/>
-                            <img src="Midia/Icones/star" alt="Quatro estrelas"/>
-                            <img src="Midia/Icones/star" alt="Cinco estrelas"/>
+                        <div class="display1">
+                            <img src="Midia/Icones/completeStar.svg"  alt="Uma estrela" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Duas estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Três estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Quatro estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Cinco estrelas" class="icon"/>
                             <p>(397)</p>
                         </div>
                         <button class="botaoPrincipal">Limpar Filtros</button>
-                    </div>
+                    </section>
+                </div>
+                <section>
                     <label>
                         <input type="checkbox"/>
-                        Avaliações com mídia
+                        Avaliações com mídia (470)
                     </label>
                 </section>
             </aside>
-            <section>
-                <p>Média</p>
+            <section class="mediaAv">
+                <p>Média:</p>
                 <p>4.8</p>
+                <img src="Midia/Icones/incompleteStar.svg" alt="Ícones de 4.8 estrelas" class="icon"/>
+            </section>
+            <hr class="separador"/>
+            <!-- Avaliação 1 -->
+            <section class="display2">
                 <div>
-                    <img src="Midia/Icones/star" alt="Uma estrela"/>
-                    <img src="Midia/Icones/star" alt="Duas estrelas"/>
-                    <img src="Midia/Icones/star" alt="Três estrelas"/>
-                    <img src="Midia/Icones/star" alt="Quatro estrelas"/>
-                    <img src="Midia/Icones/star" alt="Cinco estrelas"/>
-                    <p>(397)</p>
+                    <div class="display3">
+                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <div>
+                            <p><strong>Jennifer Souza</strong></p>
+                            <p>02/06/2025</p>
+                            <img src="Midia/Icones/completeStar.svg" alt="5 estrelas" class="icon"/>
+                        </div>
+                    </div>
+                    <p>Ótima qualidade, super recomendo a loja. E a história desse livro é linda.</p>
                 </div>
-                <hr/>
+                <img src="Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário" class="produtoAv"/>
+            </section>
+            <hr class="separador"/>
+
+            <!-- Avaliação 2 -->
+            <section class="display2">
+                <div>
+                    <div class="display3">
+                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <div>
+                            <p><strong>Bárbara Marques</strong></p>
+                            <p>06/06/2025</p>
+                            <img src="Midia/Icones/completeStar.svg" alt="5 estrelas" class="icon"/>
+                        </div>
+                    </div>
+                    <p>Perfeitoooooooo. Tanto o livro quanto a loja, amo comprar na Libris, eles têm tanto cuidado com seus clientes, quem conhece sabe, os pedidos vêm com brinde e são embalados lindamente (nunca é só o livro no plástico e uma simples caixa de papelão).</p>
+                </div>
             </section>
 
-            <section>
-                <img src="Midia/Icones/user_img.png" alt="Foto do usuário"/>
-                <div>
-                    <p>Jennifer Souza</p>
-                    <p>02/06/2025</p>
-                    <div>
-                        <img src="Midia/Icones/star" alt="Uma estrela"/>
-                        <img src="Midia/Icones/star" alt="Duas estrelas"/>
-                        <img src="Midia/Icones/star" alt="Três estrelas"/>
-                        <img src="Midia/Icones/star" alt="Quatro estrelas"/>
-                        <img src="Midia/Icones/star" alt="Cinco estrelas"/>
-                    </div>
-                </div>
-                <p>Ótima qualidade. História linda.</p>
-                <img src="Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário">
-            </section>
-            <hr/>
-            <p>Ver mais</p>
+            <p class="verMais">Ver mais</p>
         </section>
     </main>
 
