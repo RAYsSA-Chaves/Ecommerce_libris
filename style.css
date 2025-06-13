@@ -597,6 +597,7 @@ form h2 {
 .fileiraCards2 {
     width: 100%;
     justify-content: space-between;
+    gap: min(1rem);
     display: flex;
     align-items: center;
     margin-bottom: 5rem;
