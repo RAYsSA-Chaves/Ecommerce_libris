@@ -19,7 +19,8 @@
     <!-- CAMINHO DA PÁGINA -->
     <nav class="caminho">
         <ul class="setasInvertidas">
-            <li><a href="login.html" class="link">Cancelar</a></li>
+            <li><a href="login.html" class="link">Voltar</a></li>
+            <li><a href="redef_senha.html" class="link">Cancelar</a></li>
         </ul>
     </nav>
 
@@ -30,11 +31,27 @@
         <form action="redef_senha3.html" aria-label="Formulário de Login">
             <h1>Redefinir senha</h1>
             <fieldset>
-                <label for="email">Informe o e-mail para o qual a senha precisa ser redefinida</label>
-                <input type="email" name="email" placeholder="Digite seu e-mail" required/>
+                <p class="alert">
+                    <img src="Midia/Icones/alert_icon.svg" alt="Alerta" class="icon"/>
+                    Enviamos um código de segurança para o e-mail informado. Por favor, verifique seu e-mail e informe o código abaixo.
+                </p>
+                <label for="codigo">Código de segurança</label>
+                <input type="text" name="codigo" placeholder="Digite o código de segurança" required/>
             </fieldset>
-            <input type="submit" value="Continuar" class="botaoPrincipal"/>
+            <fieldset class="grupoBotoes">
+                <a href="#popup1" class="botao2">Reenviar código</a>
+                <input type="submit" value="Continuar" class="botaoPrincipal"/>
+            </fieldset>
         </form>
     </main>
+
+    <!-- POP UP -->
+    <aside class="popUp" id="popup1">
+        <div class="popupConteudo">
+            <a href="#" class="fechar">&times;</a>
+            <h1>Código reenviado</h1>
+            <p>Um novo código de segurança foi enviado para o seu e-mail.</p>
+        </div>
+    </aside>
 </body>
 </html>

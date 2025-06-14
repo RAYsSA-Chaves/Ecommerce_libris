@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Configurações</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="navegacao">
+        <!-- Parte 1 -->
+        <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
+            </a>
+            <!-- Barra de pesquisa -->
+            <form class="barraPesquisa" aria-label="Barra de pesquisa">
+                <input type="search" placeholder="Pesquise por um livro, autor, editora, entre outros" aria-label="Pesquise por livro, autor, editora, entre outros"/>
+                <button>
+                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                </button>
+            </form>
+            <!-- Seletor de idioma -->
+            <select aria-label="Escolha um idioma">
+                <option value="Português">&#x1f1e7; Português - BR</option>
+                <option value="Inglês">&#x1f1fa; English</option>
+                <option value="Espanhol">&#x1f1ea; Español</option>
+                <option value="Japonês">&#x1f1ef; 日本語</option>
+            </select>
+            <!-- Toggle de tema -->
+            <input type="checkbox" class="esconder" id="toggle"/>
+            <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
+                <div class="circle" aria-label="Ícone de sol/lua">
+                    <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
+                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon">
+                </div>
+            </label>
+        </div>
+        <!-- Parte 2 -->
+        <nav aria-label="Barra inferior com navegação">
+            <ul class="menu2">
+                <li class="linkNav"><a href="index.html">Home</a></li>
+                <li class="linkNav" id="dropdownItem">Produtos
+                    <div class="dropdown" aria-label="Menu suspenso">
+                        <a href="livros.html">Livros</a>
+                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                    </div>
+                </li>
+                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
+                <li class="linkIcone">
+                    <a href="carrinho.html">
+                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon">
+                    </a>
+                </li>
+                <li class="linkIcone">
+                    <a href="config.html">
+                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CAMINHO DA PÁGINA -->
+    <nav class="caminho">
+        <ul>
+            <li><a href="index.html" class="link">Home</a></li>
+            <li>Configurações</li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="configPage">
+        <section>
+            <h1>Configurações da conta</h1>
+            <hr/>
+            <article>
+                <section>
+                    <h2>Entre na sua conta</h2>
+                    <a href="login.html" class="botaoPrincipal">Entrar</a>
+                </section>
+            </article>
+        </section>
+        <section>
+            <h1>Configurações de acessibilidade</h1>
+            <hr/>
+            <article>
+                <section class="comBorda">
+                    <h2>Tema</h2>
+                    <select aria-label="Escolha tema para o site">
+                        <option value="Claro">Claro</option>
+                        <option value="Escuro">Escuro</option>
+                        <option value="Alto contraste">Alto contraste</option>
+            </select>
+                </section>
+            </article>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        <section class="seçoes" aria-label="Links úteis">
+            <a href="">Sobre Nós</a>
+            <a href="">Suporte e Ajuda</a>
+            <a href="">Políticas de Devolução</a>
+            <a href="">Políticas de Privacidade</a>
+        </section>
+        <section class="seçoes">
+            <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
+            <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
+                <img src="Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+                <img src="Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+            </div>
+        </section>
+        <p>2025 Libris. Todos os Direitos Reservados.</p>
+        <br/><br/>
+        <p>Desenvolvido por Rayssa Chaves.</p>
+    </footer>
+</body>
+</html>
