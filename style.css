@@ -1287,6 +1287,18 @@ button[class="botao2"] {
     margin: 5rem 0;
 }
 
+.icon2 {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+.icon3 {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
 
 /* PÁGINA DE CARRINHO */
 #conteudoCentralizado {
@@ -1334,7 +1346,7 @@ button[class="botao2"] {
 #configPage article {
     border-radius: 5px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
+    padding: 20px;
     margin: 2rem 0 5rem 0;
 }
 
@@ -1349,6 +1361,63 @@ button[class="botao2"] {
     align-items: center;
     align-content: center;
     width: fit-content;
+    margin: 0;
+}
+
+#configPage .comBorda {
+    border: solid 1px #000000;
+    border-radius: 5px;
+}
+
+#configPage .linha2 {
+    border-color: #e6e6e6;
+    margin: 2rem 0;
+}
+
+.botaoFonte {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#configPage .botaoFonte button {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#configPage .botaoFonte button:hover{
+    color: #ffffff;
+    background-color: #8a5938;
+}
+
+
+#slider2 {
+    background-color: #525252;
+}
+
+#slider2 .bolinha {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transition: 0.5s;
+    top: 2px;
+    left: 2px;
+}
+
+#toggle2:checked ~ #slider2 {
+    background-color: #8a5938;
+}
+
+#toggle2:checked ~#slider2 .bolinha {
+    transform: translateX(36px);
+}
+
+h2 a {
+    text-decoration: underline;
 }
 
 

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | HQ Invencível</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="navegacao">
+        <!-- Parte 1 -->
+        <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
+            </a>
+            <!-- Barra de pesquisa -->
+            <form class="barraPesquisa" aria-label="Barra de pesquisa">
+                <input type="search" placeholder="Pesquise por um livro, autor, editora, entre outros" aria-label="Pesquise por livro, autor, editora, entre outros"/>
+                <button>
+                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                </button>
+            </form>
+            <!-- Seletor de idioma -->
+            <select aria-label="Escolha um idioma">
+                <option value="Português">&#x1f1e7; Português - BR</option>
+                <option value="Inglês">&#x1f1fa; English</option>
+                <option value="Espanhol">&#x1f1ea; Español</option>
+                <option value="Japonês">&#x1f1ef; 日本語</option>
+            </select>
+            <!-- Toggle de tema -->
+            <input type="checkbox" class="esconder" id="toggle"/>
+            <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
+                <div class="circle" aria-label="Ícone de sol/lua">
+                    <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
+                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon"/>
+                </div>
+            </label>
+        </div>
+        <!-- Parte 2 -->
+        <nav aria-label="Barra inferior com navegação">
+            <ul class="menu2">
+                <li class="linkNav"><a href="index.html">Home</a></li>
+                <li class="linkNav" id="dropdownItem">Produtos
+                    <div class="dropdown" aria-label="Menu suspenso">
+                        <a href="livros.html">Livros</a>
+                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                    </div>
+                </li>
+                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
+                <li class="linkIcone">
+                    <a href="carrinho.html">
+                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
+                    </a>
+                </li>
+                <li class="linkIcone">
+                    <a href="config.html">
+                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CAMINHO DA PÁGINA -->
+    <nav class="caminho">
+        <ul>
+            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="livros.html" class="link">Quadrinhos (HQs e Mangás)</a></li>
+            <li>Invencível Vol. 1</li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- Resumo do produto -->
+        <section id="produtoResumo" aria-label="Resumo do produto">
+            <!-- Imagens -->
+            <section id="imagens" aria-label="Imagens do produto">
+                <div id="imagensNav">
+                    <img src="Midia/Produtos/hq_invencivel.jpg" alt="Imagem 1"/>
+                    <img src="Midia/Produtos/hq_invencivel2.jpg" alt="Imagem 2"/>
+                </div>
+                <img id="imagemMaior" src="Midia/Produtos/hq_invencivel.jpg" alt="Imagem da capa do livro Asas Reluzentes"/>
+            </section>
+            <!-- Infos -->
+            <section id="infosResumo" aria-label="Informações do produto">
+                <input type="checkbox" id="favorito1" class="favCheckbox"/>
+                <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                    <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                    <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                </label>
+                <p class="tag2">+1000 vendidos</p>
+                <h1>Asas Reluzentes</h1>
+                <p class="preço">R$ 75,90</p>
+                <p id="textoClaro">106 em estoque</p>
+                <form class="barraPesquisa" id="consultaCep" aria-label="Consultar frete">
+                    <input type="number" min="8" max="8" placeholder="Digite seu CEP" aria-label="Digite seu CEP para consultar o frete"/>
+                    <button>Consultar frete</button>
+                </form>
+                <p>Frete: R$ 00,00</p>
+                <div class="textoDisplay">
+                    <p>Valor com frete:</p>
+                    <p class="textoBg">R$ 75,90</p>
+                </div>
+                <div class="textoDisplay" aria-label="Quantidade do produto">
+                    <p>Quantidade:</p>
+                    <div class="qtd">
+                        <button>-</button>
+                        <input type="number" value="1" min="1"/>
+                        <button>+</button>
+                    </div>
+                    <p class="textoBg">R$ 75,90</p>
+                </div>
+                <button class="botaoPrincipal">Adicionar ao carrinho</button>
+            </section>
+        </section>
+
+        <!-- Sinopse -->
+        <section aria-label="Sinopse" class="containerDropdown">
+            <input type="checkbox" name="dropdownToggle" id="dropdownToggle" class="dropdownToggle"/>
+            <label for="dropdownToggle" class="dropdownLabel">
+                <div class="dropCabeçalho">
+                    <h2>Sinopse</h2>
+                    <img src="Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
+                </div>
+                <hr/>
+            </label>
+            <div class="dropdownContent">
+                <p>Séculos se passaram desde a última vez em que uma fada das estações quentes no Refúgio das Fadas cruzou a fronteira para o Bosque do Inverno e, enquanto a maioria teme as lendas de monstros espreitando nas terras congeladas, Clarion não consegue deixar de ficar fascinada pela beleza do Inverno. Mas sob os olhos atentos da atual monarca e dos Ministros das Estações da corte, Clarion tem pouco tempo para devaneios enquanto o dia de sua coroação se aproxima</p>
+                <p>Isto é, até que relatos de um monstro que pode assolar a Primavera vindo do Inverno chegam ao palácio. Derrotar essa ameaça é algo que Clarionvislumbra como uma oprtunidade de provar que é digna de seu novo papel. Mas, em vez de encontrar um monstro na fronteira do Inverno, ela se depara com Milori, um jovem guardião do Bosque do Inverno. Juntos eles criam um vínculo improvável enquanto correm para salvar seus respectivos reinos.</p>
+                <p>No entento, à medida que a aliança entre ambos evolui para algo mais, eles descobrirão que há uma razão pela qual fadas das estações quentes e do Inverno não devem se misturar. E o preço pode ser tão mortal quanto os monstros que rondam o Bosque do Inverno.</p>
+            </div>
+        </section>
+
+        <!-- Ficha técnica -->
+        <section aria-label="Características do produto" class="containerDropdown">
+            <input type="checkbox" name="dropdownToggle2" id="dropdownToggle2" class="dropdownToggle"/>
+            <label for="dropdownToggle2" class="dropdownLabel">
+                <div class="dropCabeçalho">
+                    <h2>Características do produto</h2>
+                    <img src="Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
+                </div>
+                <hr/>
+            </label>
+            <div class="dropdownContent">
+                <table class="fichaTecnica">
+                    <tr class="linhaCinza">
+                        <td>Título</td>
+                        <td>Asas Reluzentes</td>
+                    </tr>
+                    <tr class="linhaBranca">
+                        <td>Autor</td>
+                        <td>Saft, Alison</td>
+                    </tr>
+                    <tr class="linhaCinza">
+                        <td>Gêneros</td>
+                        <td>Romance, Ficção, Fantasia</td>
+                    </tr>
+                    <tr class="linhaBranca">
+                        <td>Série</td>
+                        <td>Não se aplica</td>
+                    </tr>
+                    <tr class="linhaCinza">
+                        <td>Idioma</td>
+                        <td>Português</td>
+                    </tr>
+                    <tr class="linhaBranca">
+                        <td>Editora</td>
+                        <td>Universo dos Livros</td>
+                    </tr>
+                    <tr class="linhaCinza">
+                        <td>Capa</td>
+                        <td>Mole</td>
+                    </tr>
+                    <tr class="linhaBranca">
+                        <td>Ano de publicação</td>
+                        <td>2025</td>
+                    </tr>
+                    <tr class="linhaCinza">
+                        <td>Quantidade de páginas</td>
+                        <td>336</td>
+                    </tr>
+                    <tr class="linhaBranca">
+                        <td>Estado</td>
+                        <td>NOVO</td>
+                    </tr>
+                    <tr class="linhaCinza">
+                        <td>Dimensões</td>
+                        <td>26cm x 17cm</td>
+                    </tr>
+                    <tr class="linhaBranca">
+                        <td>Classificação indicativa</td>
+                        <td>Não recomendado para menores de 18 anos</td>
+                    </tr>
+                    <tr class="linhaCinza">
+                        <td>Peso</td>
+                        <td>300g</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Avaliações e dúvidas -->
+        <section aria-label="Avaliações e dúvidas">
+            <div class="divSeçoes">
+                <h2>Avaliações (556)</h2>
+                <h2>Dúvidas (2)</h2>
+            </div>
+            <hr/>
+            <!-- Filtros -->
+            <aside class="cardsFiltros" id="filtroAv">
+                <div>
+                    <h1 class="tituloMaior">Filtrar por</h1>
+                    <br/>
+                    <section>
+                        <p>Quantidade de estrelas</p>
+                        <div class="display1">
+                            <img src="Midia/Icones/completeStar.svg"  alt="Uma estrela" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Duas estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Três estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Quatro estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Cinco estrelas" class="icon"/>
+                            <p>(457)</p>
+                        </div>
+                        <button class="botaoPrincipal">Limpar Filtros</button>
+                    </section>
+                </div>
+                <section>
+                    <label>
+                        <input type="checkbox"/>
+                        Avaliações com mídia (382)
+                    </label>
+                </section>
+            </aside>
+            <!-- Média -->
+            <section class="mediaAv">
+                <p>Média:</p>
+                <p>4.8</p>
+                <img src="Midia/Icones/estrelas4_8.png" alt="Ícones de 4.8 estrelas" class="icon2"/>
+            </section>
+            <hr class="separador"/>
+            <!-- Avaliação 1 -->
+            <section class="display2">
+                <div>
+                    <div class="display3">
+                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <div>
+                            <p><strong>Jennifer Souza</strong></p>
+                            <p>02/06/2025</p>
+                            <img src="Midia/Icones/estrelas.png" alt="5 estrelas" class="icon3"/>
+                        </div>
+                    </div>
+                    <p>Ótima qualidade, super recomendo a loja. E a história desse livro é linda.</p>
+                </div>
+                <img src="Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário" class="produtoAv"/>
+            </section>
+            <hr class="separador"/>
+
+            <!-- Avaliação 2 -->
+            <section class="display2">
+                <div>
+                    <div class="display3">
+                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <div>
+                            <p><strong>Bárbara Marques</strong></p>
+                            <p>06/06/2025</p>
+                            <img src="Midia/Icones/estrelas.png" alt="5 estrelas" class="icon3"/>
+                        </div>
+                    </div>
+                    <p>Perfeitoooooooo. Tanto o livro quanto a loja, amo comprar na Libris, eles têm tanto cuidado com seus clientes, quem conhece sabe, os pedidos vêm com brinde e são embalados lindamente (nunca é só o livro embalado num plástico e uma simples caixa de papelão).</p>
+                </div>
+            </section>
+            
+            <!-- Link para ver mais -->
+            <p class="verMais">Ver mais</p>
+        </section>
+    </main>
+
+<!-- RODAPÉ -->
+<footer>
+    <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+    <section class="seçoes" aria-label="Links úteis">
+        <a href="">Sobre Nós</a>
+        <a href="">Suporte e Ajuda</a>
+        <a href="">Políticas de Devolução</a>
+        <a href="">Políticas de Privacidade</a>
+    </section>
+    <section class="seçoes">
+        <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
+        <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
+            <img src="Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+            <img src="Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+            <img src="Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+            <img src="Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+            <img src="Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+        </div>
+    </section>
+    <p>2025 Libris. Todos os Direitos Reservados.</p>
+    <br/><br/>
+    <p>Desenvolvido por Rayssa Chaves.</p>
+</footer>
+</body>
+</html>

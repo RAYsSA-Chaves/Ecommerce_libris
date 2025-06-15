@@ -36,7 +36,7 @@
             <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
                 <div class="circle" aria-label="Ícone de sol/lua">
                     <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
-                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon">
+                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon"/>
                 </div>
             </label>
         </div>
@@ -44,7 +44,8 @@
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
                 <li class="linkNav"><a href="index.html">Home</a></li>
-                <li class="linkNav" id="dropdownItem">Produtos
+                <li class="linkNav" id="dropdownItem">
+                    Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
                         <a href="livros.html">Livros</a>
                         <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
@@ -53,12 +54,12 @@
                 <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
                 <li class="linkIcone">
                     <a href="carrinho.html">
-                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon">
+                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
                 <li class="linkIcone">
                     <a href="config.html">
-                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon">
+                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
                     </a>
                 </li>
             </ul>
@@ -75,6 +76,7 @@
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main id="configPage">
+        <!-- Configurações da conta para o usuário deslogado -->
         <section>
             <h1>Configurações da conta</h1>
             <hr/>
@@ -85,17 +87,59 @@
                 </section>
             </article>
         </section>
+        <!-- Configurações de acessibilidade -->
         <section>
             <h1>Configurações de acessibilidade</h1>
             <hr/>
             <article>
-                <section class="comBorda">
+                <!-- Tema -->
+                <section>
                     <h2>Tema</h2>
-                    <select aria-label="Escolha tema para o site">
+                    <select aria-label="Escolha tema para o site" class="comBorda">
                         <option value="Claro">Claro</option>
                         <option value="Escuro">Escuro</option>
                         <option value="Alto contraste">Alto contraste</option>
-            </select>
+                    </select>
+                </section>
+                <hr class="linha2"/>
+                <!-- Idioma -->
+                <section>
+                    <h2>Idioma</h2>
+                    <select aria-label="Escolha um idioma" class="comBorda">
+                        <option value="Português">&#x1f1e7; Português - BR</option>
+                        <option value="Inglês">&#x1f1fa; English</option>
+                        <option value="Espanhol">&#x1f1ea; Español</option>
+                        <option value="Japonês">&#x1f1ef; 日本語</option>
+                    </select>
+                </section>
+                <hr class="linha2"/>
+                <!-- Fonte -->
+                <section>
+                    <h2>Tamanho da fonte</h2>
+                    <div aria-label="Aumentar ou diminuir o tamanho da fonte" class="botaoFonte">
+                        <button>-</button>
+                        <p>Aa</p>
+                        <button>+</button>
+                    </div>
+                </section>
+                <hr class="linha2"/>
+                <!-- Animações -->
+                <section>
+                    <h2>Reduzir animações</h2>
+                    <input type="checkbox" class="esconder" id="toggle2"/>
+                    <label for="toggle2" class="slider" id="slider2" aria-label="Ativar ou desativar animações reduzidas">
+                        <span class="bolinha"></span>
+                    </label>
+                </section>
+            </article>
+        </section>
+        <!-- Suporte e ajuda -->
+        <section>
+            <h1>Suporte e Ajuda</h1>
+            <hr/>
+            <article>
+                <section>
+                    <h2><a href="superte_ajuda.html">Contate-nos</a></h2>
                 </section>
             </article>
         </section>
