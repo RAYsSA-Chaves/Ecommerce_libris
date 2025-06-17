@@ -14,7 +14,7 @@
         <!-- Parte 1 -->
         <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
             <!-- Logo -->
-            <a href="index.html">
+            <a href="home_user_logado.html">
                 <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
             </a>
             <!-- Barra de pesquisa -->
@@ -43,21 +43,29 @@
         <!-- Parte 2 -->
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
-                <li class="linkNav"><a href="index.html">Home</a></li>
+                <li id="itemAtivo" class="linkNav"><a href="home_user_logado.html">Home</a></li>
                 <li class="linkNav" id="dropdownItem">Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
-                        <a href="livros.html">Livros</a>
-                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                        <a href="livros_user_logado.html">Livros</a>
+                        <a href="quadrinhos_user_logado.html">Quadrinhos (HQs e Mangás)</a>
                     </div>
                 </li>
-                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
                 <li class="linkIcone">
-                    <a href="carrinho.html">
+                    <a href="carrinho_user_logado.html">
                         <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
+                <li id="dropdownItens2">
+                    <img src="Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
+                    <div class="dropdown" id="drop2" aria-label="Menu suspenso">
+                        <a href="perfil.html">Ver perfil</a>
+                        <a href="pedidos.html">Meus pedidos</a>
+                        <a href="fav.html">Meus favoritos</a>
+                        <a href="index.html">Sair</a>
+                    </div>
+                </li>
                 <li class="linkIcone">
-                    <a href="config.html">
+                    <a href="config_user_logado.html">
                         <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
                     </a>
                 </li>
@@ -68,7 +76,7 @@
     <!-- CAMINHO DA PÁGINA -->
     <nav class="caminho">
         <ul>
-            <li><a href="index.html" class="link">Home</a></li>
+            <li><a href="home_user_logado.html" class="link">Home</a></li>
             <li>Quadrinhos (HQs e Mangás)</li>
         </ul>
     </nav>
@@ -238,15 +246,15 @@
             <div class="fileiraCards2">
                 <!-- Card 1 -->
                 <article class="cardVertical">
-                    <a href="invencivel.html" class="cardProduto">
+                    <a href="invencivel_user_logado.html" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
                             <img src="Midia/Produtos/hq_invencivel.jpg" alt="HQ Invencível, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito" class="favCheckbox"/>
                             <label for="favorito" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do prduto">
@@ -404,8 +412,8 @@
                             <input type="checkbox" id="favorito6" class="favCheckbox"/>
                             <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -480,8 +488,8 @@
                         <div class="imageBg" aria-label="Imagem do produto">
                             <img src="Midia/Produtos/hq_batmanAbsolute.jpg" alt="HQ Batman Absolute, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
-                            <input type="checkbox" id="favorito6" class="favCheckbox"/>
-                            <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                            <input type="checkbox" id="favorito9" class="favCheckbox"/>
+                            <label for="favorito9" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
                                 <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
@@ -505,8 +513,8 @@
                         <div class="imageBg" aria-label="Imagem do produto">
                             <img src="Midia/Produtos/box_spyXfamily.jpg" alt="Box Spy X Family, volume 1 ao 4" class="imgProduto"/>
                             <!-- Ícone de favorito -->
-                            <input type="checkbox" id="favorito7" class="favCheckbox"/>
-                            <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                            <input type="checkbox" id="favorito10" class="favCheckbox"/>
+                            <label for="favorito10" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
                                 <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
@@ -530,11 +538,11 @@
                         <div class="imageBg" aria-label="Imagem do produto">
                             <img src="Midia/Produtos/manga_onePunchMan.png" alt="Mangá One Punch Man, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
-                            <input type="checkbox" id="favorito8" class="favCheckbox"/>
-                            <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                            <input type="checkbox" id="favorito11" class="favCheckbox"/>
+                            <label for="favorito11" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -556,13 +564,10 @@
     <!-- POP UP -->
     <aside class="popUp" id="popup2">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <img src="Midia/Icones/circle-x_icon.svg" alt="X indicando erro"/>
-            <h1>Não foi possível adicionar o produto ao carrinho</h1>
-            <p>Para adicionar um produto ao seu carrinho é necessário entrar na sua conta.</p>
-            <div class="display" aria-label="Botões de açaão">
-                <a href="login.html" class="botaoPrincipal">Entrar</a>
-                <a href="#" class="botao2">Cancelar</a>
-            </div>
+            <img src="Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <h1>Produto adicionado ao seu carrinho!</h1>
+            <p>O produto foi adicionado ao seu carrinho. Revise-o e finalize a sua compra!</p>
+            <a href="" class="botaoPrincipal">Ok</a>
         </div>
     </aside>
 

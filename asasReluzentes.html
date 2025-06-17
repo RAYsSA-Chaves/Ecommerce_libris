@@ -88,11 +88,11 @@
             </section>
             <!-- Infos -->
             <section id="infosResumo" aria-label="Informações do produto">
-                <input type="checkbox" id="favorito1" class="favCheckbox"/>
-                <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                <a href="#popup3" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                    <span class="circleBg"></span>
                     <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
                     <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
-                </label>
+                </a>
                 <p class="tag2">+1000 vendidos</p>
                 <h1>Asas Reluzentes</h1>
                 <p class="preço">R$ 75,90</p>
@@ -115,7 +115,7 @@
                     </div>
                     <p class="textoBg">R$ 75,90</p>
                 </div>
-                <button class="botaoPrincipal">Adicionar ao carrinho</button>
+                <a href="#popup2"><button class="botaoPrincipal">Adicionar ao carrinho</button></a>
             </section>
         </section>
 
@@ -190,15 +190,15 @@
                     </tr>
                     <tr class="linhaCinza">
                         <td>Dimensões</td>
-                        <td>26cm x 17cm</td>
+                        <td>23cm x 15.7cm</td>
                     </tr>
                     <tr class="linhaBranca">
                         <td>Classificação indicativa</td>
-                        <td>Não recomendado para menores de 18 anos</td>
+                        <td>Não recomendado para menores de 14 anos</td>
                     </tr>
                     <tr class="linhaCinza">
                         <td>Peso</td>
-                        <td>300g</td>
+                        <td>500g</td>
                     </tr>
                 </table>
             </div>
@@ -207,10 +207,16 @@
         <!-- Avaliações e dúvidas -->
         <section aria-label="Avaliações e dúvidas">
             <div class="divSeçoes">
-                <h2>Avaliações (556)</h2>
+                <h2 id="secaoAtual">Avaliações (556)</h2>
                 <h2>Dúvidas (2)</h2>
             </div>
             <hr/>
+            <!-- Média -->
+            <section class="mediaAv">
+                <p>Média:</p>
+                <p>4.8</p>
+                <img src="Midia/Icones/estrelas4_8.png" alt="Ícones de 4.8 estrelas" class="icon2"/>
+            </section>
             <!-- Filtros -->
             <aside class="cardsFiltros" id="filtroAv">
                 <div>
@@ -236,13 +242,6 @@
                     </label>
                 </section>
             </aside>
-            <!-- Média -->
-            <section class="mediaAv">
-                <p>Média:</p>
-                <p>4.8</p>
-                <img src="Midia/Icones/estrelas4_8.png" alt="Ícones de 4.8 estrelas" class="icon2"/>
-            </section>
-            <hr class="separador"/>
             <!-- Avaliação 1 -->
             <section class="display2">
                 <div>
@@ -259,7 +258,7 @@
                 <img src="Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário" class="produtoAv"/>
             </section>
             <hr class="separador"/>
-
+            
             <!-- Avaliação 2 -->
             <section class="display2">
                 <div>
@@ -279,6 +278,32 @@
             <p class="verMais">Ver mais</p>
         </section>
     </main>
+
+    <!-- POP UP DE ERRO PARA ADICIONAR AO CARRINHO -->
+    <aside class="popUp" id="popup2">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <img src="Midia/Icones/circle-x_icon.svg" alt="X indicando erro"/>
+            <h1>Não foi possível adicionar o produto ao carrinho</h1>
+            <p>Para adicionar um produto ao seu carrinho é necessário entrar na sua conta.</p>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="login.html" class="botaoPrincipal">Entrar</a>
+                <a href="#" class="botao2">Cancelar</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- POP UP DE ERRO PARA FAVORITAR -->
+    <aside class="popUp" id="popup3">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <img src="Midia/Icones/circle-x_icon.svg" alt="X indicando erro"/>
+            <h1>Não é possível favoritar o item</h1>
+            <p>Para favoritar um item é necessário entrar na sua conta.</p>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="login.html" class="botaoPrincipal">Entrar</a>
+                <a href="#" class="botao2">Cancelar</a>
+            </div>
+        </div>
+    </aside>
 
 <!-- RODAPÉ -->
 <footer>

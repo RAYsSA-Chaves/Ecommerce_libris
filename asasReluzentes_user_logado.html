@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Libris | HQ Invencível</title>
+    <title>Libris | Livro Asas Reluzentes</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
@@ -14,7 +14,7 @@
         <!-- Parte 1 -->
         <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
             <!-- Logo -->
-            <a href="index.html">
+            <a href="home_user_logado.html">
                 <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
             </a>
             <!-- Barra de pesquisa -->
@@ -43,21 +43,29 @@
         <!-- Parte 2 -->
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
-                <li class="linkNav"><a href="index.html">Home</a></li>
+                <li id="itemAtivo" class="linkNav"><a href="home_user_logado.html">Home</a></li>
                 <li class="linkNav" id="dropdownItem">Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
-                        <a href="livros.html">Livros</a>
-                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                        <a href="livros_user_logado.html">Livros</a>
+                        <a href="quadrinhos_user_logado.html">Quadrinhos (HQs e Mangás)</a>
                     </div>
                 </li>
-                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
                 <li class="linkIcone">
-                    <a href="carrinho.html">
+                    <a href="carrinho_user_logado.html">
                         <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
+                <li id="dropdownItens2">
+                    <img src="Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
+                    <div class="dropdown" id="drop2" aria-label="Menu suspenso">
+                        <a href="perfil.html">Ver perfil</a>
+                        <a href="pedidos.html">Meus pedidos</a>
+                        <a href="fav.html">Meus favoritos</a>
+                        <a href="index.html">Sair</a>
+                    </div>
+                </li>
                 <li class="linkIcone">
-                    <a href="config.html">
+                    <a href="config_user_logado.html">
                         <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
                     </a>
                 </li>
@@ -68,9 +76,9 @@
     <!-- CAMINHO DA PÁGINA -->
     <nav class="caminho">
         <ul>
-            <li><a href="index.html" class="link">Home</a></li>
-            <li><a href="livros.html" class="link">Quadrinhos (HQs e Mangás)</a></li>
-            <li>Invencível Vol. 1</li>
+            <li><a href="home_user_logado.html" class="link">Home</a></li>
+            <li><a href="livros_user_logado.html" class="link">Livros</a></li>
+            <li>Asas Reluzentes</li>
         </ul>
     </nav>
 
@@ -81,22 +89,23 @@
             <!-- Imagens -->
             <section id="imagens" aria-label="Imagens do produto">
                 <div id="imagensNav">
-                    <img src="Midia/Produtos/hq_invencivel.jpg" alt="Imagem 1"/>
-                    <img src="Midia/Produtos/hq_invencivel2.jpg" alt="Imagem 2"/>
+                    <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem 1"/>
+                    <img src="Midia/Produtos/livro_asasReluzentes2.png" alt="Imagem 2"/>
                 </div>
-                <img id="imagemMaior" src="Midia/Produtos/hq_invencivel.jpg" alt="Imagem da capa da HQ Invencível"/>
+                <img id="imagemMaior" src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem da capa do livro Asas Reluzentes"/>
             </section>
             <!-- Infos -->
             <section id="infosResumo" aria-label="Informações do produto">
-                <a href="#popup3" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                <input type="checkbox" id="favorito" class="favCheckbox"/>
+                <label for="favorito" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                     <span class="circleBg"></span>
-                    <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                    <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
-                </a>
-                <p class="tag2">899 vendidos</p>
-                <h1>Invencível, vol. 1</h1>
-                <p class="preço">R$ 19,99</p>
-                <p id="textoClaro">59 em estoque</p>
+                    <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                    <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartDefault"/>
+                </label>
+                <p class="tag2">+1000 vendidos</p>
+                <h1>Asas Reluzentes</h1>
+                <p class="preço">R$ 75,90</p>
+                <p id="textoClaro">106 em estoque</p>
                 <form class="barraPesquisa" id="consultaCep" aria-label="Consultar frete">
                     <input type="number" min="8" max="8" placeholder="Digite seu CEP" aria-label="Digite seu CEP para consultar o frete"/>
                     <button>Consultar frete</button>
@@ -104,7 +113,7 @@
                 <p>Frete: R$ 00,00</p>
                 <div class="textoDisplay">
                     <p>Valor com frete:</p>
-                    <p class="textoBg">R$ 19,99</p>
+                    <p class="textoBg">R$ 75,90</p>
                 </div>
                 <div class="textoDisplay" aria-label="Quantidade do produto">
                     <p>Quantidade:</p>
@@ -113,7 +122,7 @@
                         <input type="number" value="1" min="1"/>
                         <button>+</button>
                     </div>
-                    <p class="textoBg">R$ 19,99</p>
+                    <p class="textoBg">R$ 75,90</p>
                 </div>
                 <a href="#popup2"><button class="botaoPrincipal">Adicionar ao carrinho</button></a>
             </section>
@@ -130,8 +139,9 @@
                 <hr/>
             </label>
             <div class="dropdownContent">
-                <p>Garotas, espinhas, lição de casa e supervilões. Quando se é adolescente, ser Invencível vem bem a calhar. Mark Grayson era uma criança normal vivendo em um mundo cheio de super-heróis. Mas, ao alcançar a adolescência, ganhou poderes fantásticos graças ao seu pai, o Omni-Man. Ele agora é capaz de voar mais rápido do que um jato e erguer prédios como Hércules.</p>
-                <p>Acompanhe as incríveis aventuras de Mark Grayson em sua jornada de descobertas e tenha revelações surpreendentes ao longo do caminho!</p>
+                <p>Séculos se passaram desde a última vez em que uma fada das estações quentes no Refúgio das Fadas cruzou a fronteira para o Bosque do Inverno e, enquanto a maioria teme as lendas de monstros espreitando nas terras congeladas, Clarion não consegue deixar de ficar fascinada pela beleza do Inverno. Mas sob os olhos atentos da atual monarca e dos Ministros das Estações da corte, Clarion tem pouco tempo para devaneios enquanto o dia de sua coroação se aproxima</p>
+                <p>Isto é, até que relatos de um monstro que pode assolar a Primavera vindo do Inverno chegam ao palácio. Derrotar essa ameaça é algo que Clarionvislumbra como uma oprtunidade de provar que é digna de seu novo papel. Mas, em vez de encontrar um monstro na fronteira do Inverno, ela se depara com Milori, um jovem guardião do Bosque do Inverno. Juntos eles criam um vínculo improvável enquanto correm para salvar seus respectivos reinos.</p>
+                <p>No entento, à medida que a aliança entre ambos evolui para algo mais, eles descobrirão que há uma razão pela qual fadas das estações quentes e do Inverno não devem se misturar. E o preço pode ser tão mortal quanto os monstros que rondam o Bosque do Inverno.</p>
             </div>
         </section>
 
@@ -149,19 +159,19 @@
                 <table class="fichaTecnica">
                     <tr class="linhaCinza">
                         <td>Título</td>
-                        <td>Invencível</td>
+                        <td>Asas Reluzentes</td>
                     </tr>
                     <tr class="linhaBranca">
                         <td>Autor</td>
-                        <td>Kirkman, Robert</td>
+                        <td>Saft, Alison</td>
                     </tr>
                     <tr class="linhaCinza">
                         <td>Gêneros</td>
-                        <td>História em quadrinhos, Ficção, Aventura</td>
+                        <td>Romance, Ficção, Fantasia</td>
                     </tr>
                     <tr class="linhaBranca">
                         <td>Série</td>
-                        <td>Invencível</td>
+                        <td>Não se aplica</td>
                     </tr>
                     <tr class="linhaCinza">
                         <td>Idioma</td>
@@ -169,7 +179,7 @@
                     </tr>
                     <tr class="linhaBranca">
                         <td>Editora</td>
-                        <td>Panini Brasil LTDA</td>
+                        <td>Universo dos Livros</td>
                     </tr>
                     <tr class="linhaCinza">
                         <td>Capa</td>
@@ -181,7 +191,7 @@
                     </tr>
                     <tr class="linhaCinza">
                         <td>Quantidade de páginas</td>
-                        <td>120</td>
+                        <td>336</td>
                     </tr>
                     <tr class="linhaBranca">
                         <td>Estado</td>
@@ -189,15 +199,15 @@
                     </tr>
                     <tr class="linhaCinza">
                         <td>Dimensões</td>
-                        <td>26cm x 17cm</td>
+                        <td>23cm x 15.7cm</td>
                     </tr>
                     <tr class="linhaBranca">
                         <td>Classificação indicativa</td>
-                        <td>Não recomendado para menores de 18 anos</td>
+                        <td>Não recomendado para menores de 14 anos</td>
                     </tr>
                     <tr class="linhaCinza">
                         <td>Peso</td>
-                        <td>300g</td>
+                        <td>500g</td>
                     </tr>
                 </table>
             </div>
@@ -206,48 +216,85 @@
         <!-- Avaliações e dúvidas -->
         <section aria-label="Avaliações e dúvidas">
             <div class="divSeçoes">
-                <h2>Avaliações (122)</h2>
-                <h2 id="secaoAtual">Dúvidas (1)</h2>
+                <h2 id="secaoAtual">Avaliações (556)</h2>
+                <h2>Dúvidas (2)</h2>
             </div>
             <hr/>
-            <!-- Dúvidas -->
-            <div class="secaoDuvidas">
-                <h3>É a hq completa? Contém todos os capítulos?</h3>
-                <p class="pBg"><strong>Resposta do vendedor:</strong> Não. O livro é apenas o volume 1. Contém os capítulos de 1 a 5.</p>
-                <hr class="separador2"/>
-                <!-- Faça uma pergunta -->
-                <form action="">
-                    <label for="pergunta"><h3>Faça uma pergunta ao vendedor</h3></label>
-                    <input type="text" name="pegrunta" id="pegrunta" placeholder="Escreva a sua dúvida" required/>
-                    <input type="submit" value="Enviar" class="botaoPrincipal"/>
-                </form>
-            </div>
+            <!-- Média -->
+            <section class="mediaAv">
+                <p>Média:</p>
+                <p>4.8</p>
+                <img src="Midia/Icones/estrelas4_8.png" alt="Ícones de 4.8 estrelas" class="icon2"/>
+            </section>
+            <!-- Filtros -->
+            <aside class="cardsFiltros" id="filtroAv">
+                <div>
+                    <h1 class="tituloMaior">Filtrar por</h1>
+                    <br/>
+                    <section>
+                        <p>Quantidade de estrelas</p>
+                        <div class="display1">
+                            <img src="Midia/Icones/completeStar.svg"  alt="Uma estrela" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Duas estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Três estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Quatro estrelas" class="icon"/>
+                            <img src="Midia/Icones/completeStar.svg" alt="Cinco estrelas" class="icon"/>
+                            <p>(457)</p>
+                        </div>
+                        <button class="botaoPrincipal">Limpar Filtros</button>
+                    </section>
+                </div>
+                <section>
+                    <label>
+                        <input type="checkbox"/>
+                        Avaliações com mídia (382)
+                    </label>
+                </section>
+            </aside>
+            <!-- Avaliação 1 -->
+            <section class="display2">
+                <div>
+                    <div class="display3">
+                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <div>
+                            <p><strong>Jennifer Souza</strong></p>
+                            <p>02/06/2025</p>
+                            <img src="Midia/Icones/estrelas.png" alt="5 estrelas" class="icon3"/>
+                        </div>
+                    </div>
+                    <p>Ótima qualidade, super recomendo a loja. E a história desse livro é linda.</p>
+                </div>
+                <img src="Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário" class="produtoAv"/>
+            </section>
+            <hr class="separador"/>
+            
+            <!-- Avaliação 2 -->
+            <section class="display2">
+                <div>
+                    <div class="display3">
+                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <div>
+                            <p><strong>Bárbara Marques</strong></p>
+                            <p>06/06/2025</p>
+                            <img src="Midia/Icones/estrelas.png" alt="5 estrelas" class="icon3"/>
+                        </div>
+                    </div>
+                    <p>Perfeitoooooooo. Tanto o livro quanto a loja, amo comprar na Libris, eles têm tanto cuidado com seus clientes, quem conhece sabe, os pedidos vêm com brinde e são embalados lindamente (nunca é só o livro embalado num plástico e uma simples caixa de papelão).</p>
+                </div>
+            </section>
+            
+            <!-- Link para ver mais -->
+            <p class="verMais">Ver mais</p>
         </section>
     </main>
 
-    <!-- POP UP DE ERRO PARA ADICIONAR AO CARRINHO -->
+    <!-- POP UP -->
     <aside class="popUp" id="popup2">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <img src="Midia/Icones/circle-x_icon.svg" alt="X indicando erro"/>
-            <h1>Não foi possível adicionar o produto ao carrinho</h1>
-            <p>Para adicionar um produto ao seu carrinho é necessário entrar na sua conta.</p>
-            <div class="display" aria-label="Botões de açaão">
-                <a href="login.html" class="botaoPrincipal">Entrar</a>
-                <a href="#" class="botao2">Cancelar</a>
-            </div>
-        </div>
-    </aside>
-
-    <!-- POP UP DE ERRO PARA FAVORITAR -->
-    <aside class="popUp" id="popup3">
-        <div class="popupConteudo" aria-label="Mensagem pop up">
-            <img src="Midia/Icones/circle-x_icon.svg" alt="X indicando erro"/>
-            <h1>Não é possível favoritar o item</h1>
-            <p>Para favoritar um item é necessário entrar na sua conta.</p>
-            <div class="display" aria-label="Botões de açaão">
-                <a href="login.html" class="botaoPrincipal">Entrar</a>
-                <a href="#" class="botao2">Cancelar</a>
-            </div>
+            <img src="Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <h1>Produto adicionado ao seu carrinho!</h1>
+            <p>O produto foi adicionado ao seu carrinho. Revise-o e finalize a sua compra!</p>
+            <a href="" class="botaoPrincipal">Ok</a>
         </div>
     </aside>
 

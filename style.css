@@ -273,7 +273,6 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
 .linkNav {
     padding-bottom: 20px;
     height: 100%;
-    cursor: pointer;
 }
 
 .linkNav a {
@@ -291,7 +290,7 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
 }
 
 /* Menu supenso */
-#dropdownItem {
+#dropdownItem, #dropdownItens2 {
     position: relative;
 }
 
@@ -300,6 +299,10 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
     position: absolute;
     background-color: #e6e6e6;
     font-size: 15px;
+}
+
+#drop2 {
+    left: -250%;
 }
 
 .dropdown a {
@@ -317,6 +320,12 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
     width: 250px;
 }
 
+#dropdownItens2:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
 /* Ícones do menu */
 .linkIcone img[alt="Configurações"] {
     max-width: 25px;
@@ -332,8 +341,13 @@ input[type=checkbox]:checked + label .circle img[alt="Lua"] {
 }
 
 .linkIcone:hover {
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: #e6e6e6;
+}
+
+#iconPerfil {
+    width: 18px;
+    height: auto;
 }
 
 
@@ -624,6 +638,14 @@ form h2 {
     width: 400px;
     border-radius: 10px;
     position: relative;
+    text-align: center;
+}
+
+.popupConteudo img {
+    max-width: 60px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .popupConteudo h1 {
@@ -635,6 +657,31 @@ form h2 {
     top: 10px;
     right: 15px;
     font-size: 30px;
+}
+
+.popupConteudo .botaoPrincipal {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.popupConteudo .botao2, .popupConteudo .botaoPrincipal {
+    height: 40px;
+    width: 200px;
+}
+
+.popupConteudo .display {
+    justify-content: center;
+}
+
+#popup2 .popupConteudo, #popup3 .popupConteudo {
+    width: 500px;
+    margin: 200px auto;
+    justify-items: center;
+}
+
+#popup2 .popupConteudo h1, #popup3 .popupConteudo h1 {
+    width: 100%;
 }
 
 
@@ -792,8 +839,6 @@ form h2 {
 
 .botoesAçao .botaoPrincipal img {
     max-width: 25px;
-    width: 100%;
-    height: auto;
 }
 
 .cardProduto {
@@ -833,7 +878,6 @@ button[class="botao2"] {
 .heartIcon img {
     position: absolute;
     width: 100%;
-    height: 100%;
     transition: opacity 0.2s ease;
 }
 
@@ -1180,13 +1224,13 @@ button[class="botao2"] {
     width: 230px;
 }
 
-.divSeçoes h2:first-child {
+.divSeçoes #secaoAtual {
     color: #ffffff;
     background-color: #000000;
     border-radius: 10px 10px 0 0;
 }
 
-.divSeçoes h2:last-child {
+.divSeçoes h2 {
     border: solid 1px #000000;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
@@ -1231,6 +1275,7 @@ button[class="botao2"] {
 
 .mediaAv {
     text-align: center;
+    margin-top: 2rem;
 }
 
 .mediaAv * {
@@ -1277,8 +1322,34 @@ button[class="botao2"] {
     border-radius: 5px;
 }
 
+.secaoDuvidas * {
+    margin: 1rem 0;
+}
+
+.secaoDuvidas h3:first-child {
+    margin-top: 2rem;
+}
+
+.secaoDuvidas form * {
+    margin: 0 0 5px 0;
+}
+
+.secaoDuvidas form input:last-of-type {
+    width: fit-content;
+    margin: 10px 0 3rem 0;
+}
+
+.pBg {
+    background-color: #e6e6e6;
+    padding: 10px;
+}
+
 .separador {
     margin: 1rem 0 1rem 0;
+}
+
+.separador2 {
+    margin: 3rem 0 3rem 0;
 }
 
 .verMais{

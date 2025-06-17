@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Libris | Produtos - Quadrinhos</title>
+    <title>Libris | Produtos - Livros</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
@@ -14,7 +14,7 @@
         <!-- Parte 1 -->
         <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
             <!-- Logo -->
-            <a href="index.html">
+            <a href="home_user_logado.html">
                 <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
             </a>
             <!-- Barra de pesquisa -->
@@ -43,21 +43,29 @@
         <!-- Parte 2 -->
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
-                <li class="linkNav"><a href="index.html">Home</a></li>
+                <li id="itemAtivo" class="linkNav"><a href="home_user_logado.html">Home</a></li>
                 <li class="linkNav" id="dropdownItem">Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
-                        <a href="livros.html">Livros</a>
-                        <a href="quadrinhos.html">Quadrinhos (HQs e Mangás)</a>
+                        <a href="livros_user_logado.html">Livros</a>
+                        <a href="quadrinhos_user_logado.html">Quadrinhos (HQs e Mangás)</a>
                     </div>
                 </li>
-                <li class="linkNav" id="linkHover"><a href="login.html">Entrar</a></li>
                 <li class="linkIcone">
-                    <a href="carrinho.html">
+                    <a href="carrinho_user_logado.html">
                         <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
+                <li id="dropdownItens2">
+                    <img src="Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
+                    <div class="dropdown" id="drop2" aria-label="Menu suspenso">
+                        <a href="perfil.html">Ver perfil</a>
+                        <a href="pedidos.html">Meus pedidos</a>
+                        <a href="fav.html">Meus favoritos</a>
+                        <a href="index.html">Sair</a>
+                    </div>
+                </li>
                 <li class="linkIcone">
-                    <a href="config.html">
+                    <a href="config_user_logado.html">
                         <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
                     </a>
                 </li>
@@ -68,8 +76,8 @@
     <!-- CAMINHO DA PÁGINA -->
     <nav class="caminho">
         <ul>
-            <li><a href="index.html" class="link">Home</a></li>
-            <li>Quadrinhos (HQs e Mangás)</li>
+            <li><a href="home_user_logado.html" class="link">Home</a></li>
+            <li>Livros</li>
         </ul>
     </nav>
 
@@ -91,18 +99,6 @@
                         <input type="number" step="0.01" min="0" placeholder="-"/>
                     </fieldset>
                 </form>
-            </section>
-            <!-- Categoria -->
-            <section class="cardsFiltros">
-                <h2>Categoria</h2>
-                <label>
-                    <input type="checkbox"/>
-                    HQs
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    Mangás
-                </label>
             </section>
             <!-- Gênero -->
             <section class="cardsFiltros">
@@ -158,7 +154,7 @@
             <section class="cardsFiltros">
                 <h2>Editora</h2>
                 <form class="barraPesquisa" aria-label="Barra de pesquisa">
-                    <input type="search" placeholder="Pesquise por uma editora" aria-label="Pesquise por uma editora"/>
+                    <input type="search" placeholder="Pesquise por uma editora" aria-label="Pesquise uma editora"/>
                     <button>
                         <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
                     </button>
@@ -233,25 +229,25 @@
 
         <!-- Seção com os livros -->
         <section aria-label="Produtos" class="seçoes" id="seçaoProdutos">
-            <h1>Quadrinhos (HQs e Mangás)</h1>
+            <h1>Livros</h1>
             <!-- Fileira 1 -->
             <div class="fileiraCards2">
                 <!-- Card 1 -->
                 <article class="cardVertical">
-                    <a href="invencivel.html" class="cardProduto">
+                    <a href="asasReluzentes_user_logado.html" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_invencivel.jpg" alt="HQ Invencível, volume 1" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzantes" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito" class="favCheckbox"/>
                             <label for="favorito" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do prduto">
-                            <h2>Invencível, vol. 1</h2>
-                            <p class="preço">R$ 19,99</p>
+                            <h2>Asas Reluzentes</h2>
+                            <p class="preço">R$ 69,90</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -265,7 +261,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_watchmen.jpg" alt="HQ Watchaen, edição definitiva" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_bibliotecaMeiaNoite.jpg" alt="Livro A Bilioteca da Meia Noite" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito1" class="favCheckbox"/>
                             <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -275,8 +271,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Watchmen, Edição Definitiva</h2>
-                            <p class="preço">R$ 220,69</p>
+                            <h2>A Bilioteca da Meia Noite</h2>
+                            <p class="preço">R$ 40,00</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -290,7 +286,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_deadpool.jpg" alt="HQ Deadpool Massacra o Universo Marvel" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_assimQueAcaba.jpg" alt="Livro É Assim que Acaba, volume 1 e marcador de página" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito2" class="favCheckbox"/>
                             <label for="favorito2" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -300,8 +296,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Deadpool Massacra o Universo Marvel</h2>
-                            <p class="preço">R$ 49,99</p>
+                            <h2>É Assim que Acaba, vol. 1 + marcador de página</h2>
+                            <p class="preço">R$ 36,90</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -319,7 +315,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/manga_jujutsuKaisen.jpg" alt="Box Jujutsu Kaisen, volume 0 ao 3" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_amorGelato.jpg" alt="Livro Amor e Gelato, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito3" class="favCheckbox"/>
                             <label for="favorito3" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -329,8 +325,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Box Jujutsu Kaisen, vol. 0 ao 3</h2>
-                            <p class="preço">R$ 100,00</p>
+                            <h2>Amor & Gelato, vol. 1</h2>
+                            <p class="preço">R$ 36,90</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -344,7 +340,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/box_onePiece.jpg" alt="Box One Piece, volume 1 ao 23" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_aMetamorfose.jpg" alt="Livro A Metamorfose" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito4" class="favCheckbox"/>
                             <label for="favorito4" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -354,8 +350,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Box One Piece, vol. 1 ao 23</h2>
-                            <p class="preço">R$ 949,90</p>
+                            <h2>A Metamorfose</h2>
+                            <p class="preço">R$ 34,40</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -370,18 +366,18 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_guerrasSecretas.jpg" alt="HQ Guerras Secretas, volume 1" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_Selecao.jpg" alt="Livro A Seleção, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito5" class="favCheckbox"/>
                             <label for="favorito5" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido " class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido " class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>HQ Guerras Secretas, vol. 1</h2>
-                            <p class="preço">R$ 30,00</p>
+                            <h2>A Seleção, vol. 1</h2>
+                            <p class="preço">R$ 35,00</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -399,7 +395,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/manga_tokyoRevengers.jpg" alt="Mangá Tokyo Revengers, volume 1" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_aElite.jpg" alt="Livro A Elite, volume 2" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito6" class="favCheckbox"/>
                             <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -409,8 +405,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Tokyo Revengers, vol. 1</h2>
-                            <p class="preço">R$ 29,80</p>
+                            <h2>A Elite, vol. 2</h2>
+                            <p class="preço">R$ 37,80</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -424,7 +420,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_kickAss.jpg" alt="HQ Kick Ass, volume 1" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_aEscolha.jpg" alt="Livro A Escolha, volume 3" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito7" class="favCheckbox"/>
                             <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -434,8 +430,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Kick Ass, vol. 1</h2>
-                            <p class="preço">R$ 38,99</p>
+                            <h2>A Escolha, vol. 3</h2>
+                            <p class="preço">R$ 42,70</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -449,18 +445,18 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_piadaMortal.jpg" alt="HQ Batman, A Piada Mortal" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_cidadesPapel.jpg" alt="Livro Cidades de Papel" class="imgProduto"/>
                             <!-- Ícone de favorito -->
-                            <input type="checkbox" id="favorito8" class="favCheckbox"/>
-                            <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                            <input type="checkbox" id="favorito9" class="favCheckbox"/>
+                            <label for="favorito9" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
                                 <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Batman - A Piada Mortal</h2>
-                            <p class="preço">R$ 31,68</p>
+                            <h2>Cidades de Papel</h2>
+                            <p class="preço">R$ 39,40</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -478,18 +474,18 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/hq_batmanAbsolute.jpg" alt="HQ Batman Absolute, volume 1" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_evelynHugo.jpg" alt="Livro Os Sete Maridos de Evelyn Hugo" class="imgProduto"/>
                             <!-- Ícone de favorito -->
-                            <input type="checkbox" id="favorito6" class="favCheckbox"/>
-                            <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                            <input type="checkbox" id="favorito10" class="favCheckbox"/>
+                            <label for="favorito10" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartIcon2"/>
+                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Batman Absolute, vol. 1</h2>
-                            <p class="preço">R$ 89,90</p>
+                            <h2>Os Sete Maridos de Evelyn Hugo</h2>
+                            <p class="preço">R$ 32,90</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -503,22 +499,22 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/box_spyXfamily.jpg" alt="Box Spy X Family, volume 1 ao 4" class="imgProduto"/>
+                            <img src="Midia/Produtos/livro_cronicasBane.jpg" alt="Livro As Crônicas de Bane" class="imgProduto"/>
                             <!-- Ícone de favorito -->
-                            <input type="checkbox" id="favorito7" class="favCheckbox"/>
-                            <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
+                            <input type="checkbox" id="favorito11" class="favCheckbox"/>
+                            <label for="favorito11" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
                                 <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
                                 <img src="Midia/Icones/heart_icon2.svg" alt="Coração preencheido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>Box Spy X Family, vol. 1 ao 4</h2>
-                            <p class="preço">R$ 95,70</p>
+                            <h2>As Crônicas de Bane</h2>
+                            <p class="preço">R$ 70,00</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho" class="iconeNormal" />
+                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -528,7 +524,7 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/manga_onePunchMan.png" alt="Mangá One Punch Man, volume 1" class="imgProduto"/>
+                            <img src="Midia/Produtos/box_harryPotter.jpg" alt="Box de Harry Potter, volume 1 ao 7 e marcador de página" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito8" class="favCheckbox"/>
                             <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
@@ -538,8 +534,8 @@
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
-                            <h2>One Punch Man, vol. 1</h2>
-                            <p class="preço">R$ 34,50</p>
+                            <h2>Box Harry Potter, vol. 1 ao 7 + marcador</h2>
+                            <p class="preço">R$ 324,90</p>
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
@@ -556,13 +552,10 @@
     <!-- POP UP -->
     <aside class="popUp" id="popup2">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <img src="Midia/Icones/circle-x_icon.svg" alt="X indicando erro"/>
-            <h1>Não foi possível adicionar o produto ao carrinho</h1>
-            <p>Para adicionar um produto ao seu carrinho é necessário entrar na sua conta.</p>
-            <div class="display" aria-label="Botões de açaão">
-                <a href="login.html" class="botaoPrincipal">Entrar</a>
-                <a href="#" class="botao2">Cancelar</a>
-            </div>
+            <img src="Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <h1>Produto adicionado ao seu carrinho!</h1>
+            <p>O produto foi adicionado ao seu carrinho. Revise-o e finalize a sua compra!</p>
+            <a href="" class="botaoPrincipal">Ok</a>
         </div>
     </aside>
 
