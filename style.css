@@ -850,11 +850,11 @@ button[class="botao2"] {
 }
 
 /* Ícone de favorito */
-.favCheckbox {
+.favCheckbox, .favCheckbox2 {
     display: none;
 }
 
-.heartIcon {
+.heartIcon, .heartIcon_logado {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -875,7 +875,7 @@ button[class="botao2"] {
     transform: translate(-50%, -20%);
 }
 
-.heartIcon img {
+.heartIcon img, .heartIcon_logado img {
     position: absolute;
     width: 100%;
     transition: opacity 0.2s ease;
@@ -892,6 +892,24 @@ button[class="botao2"] {
 .favCheckbox:checked + .heartIcon .heartDefault, .heartIcon:hover .heartDefault {
     opacity: 0;
 }
+
+.favCheckbox2:checked + .heartIcon_logado .heartIcon2 {
+    opacity: 1;
+}
+
+.favCheckbox2:checked + .heartIcon_logado .heartDefault {
+    opacity: 0;
+} 
+
+.favCheckbox2:checked + .heartIcon_logado:hover .heartDefault {
+    opacity: 1;
+}
+
+.favCheckbox2:checked + .heartIcon_logado:hover .heartIcon2 {
+    opacity: 0;
+}
+
+
 /* --- */
 
 .cardProduto img {
