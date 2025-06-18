@@ -1429,6 +1429,10 @@ button[class="botao2"] {
     padding-right: 6rem;
 }
 
+#carrinho td:last-child, #carrinho th:last-child {
+    padding-right: 0;
+}
+
 #carrinho tr:last-child td {
     border-bottom: none;
 }
@@ -1447,10 +1451,12 @@ td img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-right: 10px;
 }
 
 td[class="display"] {
     align-items: center;
+    gap: 0;
 }
 
 #paginaConteudo {
@@ -1459,14 +1465,59 @@ td[class="display"] {
 }
 
 .resumoPedido {
-    width: 500px;
-    background-color: #dadada;
+    max-width: 500px;
+    width: 100%;
+    background-color: #e1e1e1;
     padding: 2rem;
+    padding-top: 9rem;
 }
 
 .resumoPedido h2 {
     text-align: left;
+    font-size: 20px;
 }
+
+.resumoPedido * {
+    margin-bottom: 1rem;
+}
+
+.resumoPedido h1 {
+    margin-bottom: 2rem;
+}
+
+.resumoPedido p {
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.resumoPedido form input {
+    background-color: #e1e1e1;
+} 
+
+.resumoPedido form {
+    width: 100%;
+}
+
+.resumoPedido #consultaCep button {
+    top: 22px;
+    right: 2%;
+}
+
+.resumoPedido #total {
+    margin-top: 2rem;
+}
+
+.resumoPedido hr {
+    margin: 3rem 0;
+}
+
+.resumoPedido .botaoPrincipal {
+    display: block;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+
 
 /* PÁGINA DE CONFIGURAÇÕES */
 #configPage hr {
