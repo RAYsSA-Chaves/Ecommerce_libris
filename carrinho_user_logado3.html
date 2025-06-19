@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Libris | Carrinho</title>
+    <title>Libris | Carrinho - Envio</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
@@ -22,63 +22,39 @@
             <nav class="caminho">
                 <ul>
                     <li><a href="home_user_logado.html" class="link">Home</a></li>
-                    <li>Carrinho</li>
+                    <li><a href="carrinho_user_logado.html" class="link">Carrinho</a></li>
+                    <li><a href="carrinho_user_logado2.html" class="link">Entrega</a></li>
+                    <li>Frete</li>
                 </ul>
             </nav>
 
             <!-- CONTEÚDO PRINCIPAL -->
-            <main id="carrinho">
-                <!-- Carrinho -->
-                <h1>Meu carrinho</h1>
+            <main id="frete">
+                <h1>Frete</h1>
                 <hr class="separador"/>
-                <table id="carrinho">
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Preço</th>
-                        <th>Excluir</th>
-                    </tr>
-                    <!-- Produto 1 -->
-                    <tr>
-                        <td class="display">
-                            <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzentes"/>
-                            <p><strong>Asas Reluzentes</strong></p>
-                        </td>
-                        <td>
-                            <div class="qtd">
-                                <button>-</button>
-                                <input type="number" value="1" min="1"/>
-                                <button>+</button>
-                            </div>
-                        </td>
-                        <td>R$ 69,90</td>
-                        <td>
-                            <a href="">
-                                <img src="Midia/Icones/trash_icon.svg" alt="Ícone de lixeira" class="icon"/>
-                                </a>
-                        </td>
-                    </tr>
-                    <!-- Produto 2 -->
-                    <tr>
-                        <td class="display">
-                            <img src="Midia/Produtos/hq_invencivel.jpg" alt="Livro Asas Reluzentes"/>
-                            <p><strong>Invencível, vol. 1</strong></p>
-                        </td>
-                        <td>
-                            <div class="qtd">
-                                <button>-</button>
-                                <input type="number" value="1" min="1"/>
-                                <button>+</button>
-                            </div>
-                        </td>
-                        <td>R$ 19,99</td>
-                        <td>
-                            <a href="">
-                                <img src="Midia/Icones/trash_icon.svg" alt="Ícone de lixeira" class="icon"/>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+                <h2>Escolha a forma de envio</h2>
+                <!-- Opção 1 -->
+                <div class="opçao" aria-label="Opção 1">
+                    <div class="opçaoDescricao">
+                        <input type="radio" name="opçao" id="opcao1"/>
+                        <label for="opcao1" class="tituloSeletor">
+                            <h3>Envio Padrão</h3>
+                            <p>Chegará em até 10 dias úteis</p>
+                        </label>
+                    </div>
+                    <p class="freteTag">Grátis</p>
+                </div>
+                <!-- Opção 2 -->
+                <div class="opçao" aria-label="Opção 2">
+                    <div class="opçaoDescricao">
+                        <input type="radio" name="opçao" id="opcao2"/>
+                        <label for="opcao2" class="tituloSeletor">
+                            <h3>Envio Rápido</h3>
+                            <p>Chegará em até 3 dias úteis</p>
+                        </label>
+                    </div>
+                    <p class="freteTag">Grátis</p>
+                </div>
             </main>
         </div>
 
@@ -104,12 +80,16 @@
                 <h2>Desconto:</h2>
                 <p>R$ 00,00</p>
             </section>
+            <section class="display">
+                <h2>Frete:</h2>
+                <p class="freteTag">Grátis</p>
+            </section>
             <hr/>
             <section class="display" id="total">
                 <h2>Total:</h2>
                 <p>R$ 89,89</p>
             </section>
-            <a href="carrinho_user_logado2.html" class="botaoPrincipal">Realizar compra</a>
+            <a href="carrinho_user_logado4.html" class="botaoPrincipal">Continuar</a>
         </aside>
     </div>
 

@@ -980,6 +980,9 @@ button[class="botao2"] {
     height: 25px;
     display: inline-block;
     cursor: pointer;
+}
+
+input[type="checkbox"] {
     accent-color: #8a5938;
 }
 
@@ -1446,6 +1449,10 @@ button[class="botao2"] {
     margin-bottom: 10rem;
 }
 
+#carrinho p {
+    white-space: nowrap;
+}
+
 td img {
     max-width: 250px;
     width: 100%;
@@ -1465,7 +1472,7 @@ td[class="display"] {
 }
 
 .resumoPedido {
-    max-width: 500px;
+    max-width: 450px;
     width: 100%;
     background-color: #e1e1e1;
     padding: 2rem;
@@ -1516,6 +1523,204 @@ td[class="display"] {
     width: 100%;
     text-align: center;
     align-content: center;
+}
+
+/* Página de endereço de entrega */
+#entrega {
+    width: 150%;
+}
+
+#entrega h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.comMargem + p {
+    margin-bottom: 2rem;
+}
+
+.comMargem {
+    margin-bottom: 1rem;
+}
+
+.formEndereço {
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0 3rem 0;
+}
+
+.formEndereço label {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.formEndereço label input {
+    width: 20px;
+}
+
+.formEndereço .tituloSeletor {
+    margin-bottom: 2rem;
+}
+
+#entrega form {
+    margin: 0 2rem;
+}
+
+#entrega form fieldset{
+    margin-bottom: 2rem;
+}
+
+#entrega form fieldset label{
+    margin-bottom: 10px;
+}
+
+.inputMenor {
+    width: 400px;
+}
+
+/* Página de frete */
+#frete {
+    width: 200%;
+}
+
+#frete h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.opçao {
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.opçaoDescricao {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.opçaoDescricao input {
+    width: 20px;
+}
+
+.freteTag {
+    color: rgb(18, 129, 18);
+    font-weight: 600;
+}
+
+/* Página de pagamento */
+#pg {
+    width: 85%;
+}
+
+#pg h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+    accent-color: #8a5938;
+}
+
+.icon3 {
+    max-width: 35px;
+    width: 100%;
+    height: auto;
+}
+
+.icon4 {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+}
+
+#containerForm form {
+    margin: 0 2rem;
+}
+
+#containerForm form fieldset {
+    margin-bottom: 2rem;
+}
+
+#containerForm form fieldset:last-of-type {
+    margin-bottom: 0;
+}
+
+#containerForm form fieldset label {
+    margin-bottom: 10px;
+}
+
+#containerForm .alert {
+    margin-top: 10px;
+}
+
+/* Tela de confirmação de pagamento */
+.detalhes {
+    width: 90%;
+    text-align: left;
+    background-color: #e6e6e6;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.detalhes h2 {
+    text-align: left;
+}
+
+.detalhes p {
+    margin-bottom: 5px;
+}
+
+#conteudoCentralizado .detalhes p:last-of-type {
+    margin: 0;
+}
+
+.mainMargem {
+    margin-bottom: 5rem;
+}
+
+.mainMargem section:last-child {
+    margin-top: 2rem;
+}
+
+.mainMargem section:first-child {
+    text-align: center;
+}
+
+.mainMargem h1 {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+/* PÁGINA DE FAVORITOS*/
+#favoritos .fileiraCards2 {
+    justify-content: center;
+    gap: max(8rem);
+}
+
+#favoritos .tituloPagina {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+#favoritos .tituloPagina p {
+    text-align: right;
+}
+
+#favoritos h1 {
+    width: 100%;
+    margin: 1rem 0;
+} 
+
+.icon5 {
+    max-width: 80px;
+    width: 100%;
+    height: auto;
 }
 
 
