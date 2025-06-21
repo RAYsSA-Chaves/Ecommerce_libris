@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Libris | Livro Asas Reluzentes</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
 </head>
 <body>
@@ -15,13 +15,13 @@
         <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
             <!-- Logo -->
             <a href="home_user_logado.html">
-                <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
+                <img src="../Midia/Logo/logo.png" alt="Logo da Libris"/>
             </a>
             <!-- Barra de pesquisa -->
             <form class="barraPesquisa" aria-label="Barra de pesquisa">
                 <input type="search" placeholder="Pesquise por um livro, autor, editora, entre outros" aria-label="Pesquise por livro, autor, editora, entre outros"/>
                 <button>
-                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                    <img src="../Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
                 </button>
             </form>
             <!-- Seletor de idioma -->
@@ -35,15 +35,15 @@
             <input type="checkbox" class="esconder" id="toggle"/>
             <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
                 <div class="circle" aria-label="Ícone de sol/lua">
-                    <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
-                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon"/>
+                    <img src="../Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
+                    <img src="../Midia/Icones/moon_icon.svg" alt="Lua" class="icon"/>
                 </div>
             </label>
         </div>
         <!-- Parte 2 -->
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
-                <li id="itemAtivo" class="linkNav"><a href="home_user_logado.html">Home</a></li>
+                <li class="linkNav" id="linkHover"><a href="home_user_logado.html">Home</a></li>
                 <li class="linkNav" id="dropdownItem">
                     Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
@@ -53,21 +53,21 @@
                 </li>
                 <li class="linkIcone">
                     <a href="carrinho_user_logado.html">
-                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
+                        <img src="../Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
                 <li id="dropdownItens2">
-                    <img src="Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
+                    <img src="../Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
                     <div class="dropdown" id="drop2" aria-label="Menu suspenso">
                         <a href="perfil.html">Ver perfil</a>
                         <a href="pedidos.html">Meus pedidos</a>
                         <a href="fav.html">Meus favoritos</a>
-                        <a href="index.html">Sair</a>
+                        <a href="../index.html">Sair</a>
                     </div>
                 </li>
                 <li class="linkIcone">
                     <a href="config_user_logado.html">
-                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
+                        <img src="../Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
                     </a>
                 </li>
             </ul>
@@ -90,18 +90,18 @@
             <!-- Imagens -->
             <section id="imagens" aria-label="Imagens do produto">
                 <div id="imagensNav">
-                    <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem 1"/>
-                    <img src="Midia/Produtos/livro_asasReluzentes2.png" alt="Imagem 2"/>
+                    <img src="../Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem 1"/>
+                    <img src="../Midia/Produtos/livro_asasReluzentes2.png" alt="Imagem 2"/>
                 </div>
-                <img id="imagemMaior" src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem da capa do livro Asas Reluzentes"/>
+                <img id="imagemMaior" src="../Midia/Produtos/livro_asasReluzentes.jpg" alt="Imagem da capa do livro Asas Reluzentes"/>
             </section>
             <!-- Infos -->
             <section id="infosResumo" aria-label="Informações do produto">
                 <input type="checkbox" id="favorito1" class="favCheckbox2"/>
                 <label for="favorito1" class="heartIcon_logado" aria-label="Adicionar/remover item dos favoritos">
                     <span class="circleBg"></span>
-                    <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
-                    <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartDefault"/>
+                    <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                    <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartDefault"/>
                 </label>
                 <p class="tag2">+1000 vendidos</p>
                 <h1>Asas Reluzentes</h1>
@@ -135,7 +135,7 @@
             <label for="dropdownToggle" class="dropdownLabel">
                 <div class="dropCabeçalho">
                     <h2>Sinopse</h2>
-                    <img src="Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
+                    <img src="../Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
                 </div>
                 <hr/>
             </label>
@@ -152,7 +152,7 @@
             <label for="dropdownToggle2" class="dropdownLabel">
                 <div class="dropCabeçalho">
                     <h2>Características do produto</h2>
-                    <img src="Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
+                    <img src="../Midia/Icones/arrow_icon.svg" alt="Ícone de seta para baixo" class="icon"/>
                 </div>
                 <hr/>
             </label>
@@ -225,7 +225,7 @@
             <section class="mediaAv">
                 <p>Média:</p>
                 <p>4.8</p>
-                <img src="Midia/Icones/estrelas4_8.png" alt="Ícones de 4.8 estrelas" class="icon2"/>
+                <img src="../Midia/Icones/estrelas4_8.png" alt="Ícones de 4.8 estrelas" class="icon2"/>
             </section>
             <!-- Filtros -->
             <aside class="cardsFiltros" id="filtroAv">
@@ -235,11 +235,11 @@
                     <section>
                         <p>Quantidade de estrelas</p>
                         <div class="display1">
-                            <img src="Midia/Icones/completeStar.svg"  alt="Uma estrela" class="icon"/>
-                            <img src="Midia/Icones/completeStar.svg" alt="Duas estrelas" class="icon"/>
-                            <img src="Midia/Icones/completeStar.svg" alt="Três estrelas" class="icon"/>
-                            <img src="Midia/Icones/completeStar.svg" alt="Quatro estrelas" class="icon"/>
-                            <img src="Midia/Icones/completeStar.svg" alt="Cinco estrelas" class="icon"/>
+                            <img src="../Midia/Icones/completeStar.svg"  alt="Uma estrela" class="icon"/>
+                            <img src="../Midia/Icones/completeStar.svg" alt="Duas estrelas" class="icon"/>
+                            <img src="../Midia/Icones/completeStar.svg" alt="Três estrelas" class="icon"/>
+                            <img src="../Midia/Icones/completeStar.svg" alt="Quatro estrelas" class="icon"/>
+                            <img src="../Midia/Icones/completeStar.svg" alt="Cinco estrelas" class="icon"/>
                             <p>(457)</p>
                         </div>
                         <button class="botaoPrincipal">Limpar Filtros</button>
@@ -256,16 +256,16 @@
             <section class="display2">
                 <div>
                     <div class="display3">
-                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <img src="../Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
                         <div>
                             <p><strong>Jennifer Souza</strong></p>
                             <p>02/06/2025</p>
-                            <img src="Midia/Icones/estrelas.png" alt="5 estrelas" class="icon3"/>
+                            <img src="../Midia/Icones/estrelas.png" alt="5 estrelas" class="icon10"/>
                         </div>
                     </div>
                     <p>Ótima qualidade, super recomendo a loja. E a história desse livro é linda.</p>
                 </div>
-                <img src="Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário" class="produtoAv"/>
+                <img src="../Midia/avaliaçoes/av_asasReluzentes.png" alt="Foto do produto tirada pelo usuário" class="produtoAv"/>
             </section>
             <hr class="separador"/>
             
@@ -273,11 +273,11 @@
             <section class="display2">
                 <div>
                     <div class="display3">
-                        <img src="Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
+                        <img src="../Midia/Icones/user_img.png" alt="Foto do usuário" class="userFoto"/>
                         <div>
                             <p><strong>Bárbara Marques</strong></p>
                             <p>06/06/2025</p>
-                            <img src="Midia/Icones/estrelas.png" alt="5 estrelas" class="icon3"/>
+                            <img src="../Midia/Icones/estrelas.png" alt="5 estrelas" class="icon10"/>
                         </div>
                     </div>
                     <p>Perfeitoooooooo. Tanto o livro quanto a loja, amo comprar na Libris, eles têm tanto cuidado com seus clientes, quem conhece sabe, os pedidos vêm com brinde e são embalados lindamente (nunca é só o livro embalado num plástico e uma simples caixa de papelão).</p>
@@ -292,7 +292,7 @@
     <!-- POP UP -->
     <aside class="popUp" id="popup2">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <img src="Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <img src="../Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
             <h1>Produto adicionado ao seu carrinho!</h1>
             <p>O produto foi adicionado ao seu carrinho. Revise-o e finalize a sua compra!</p>
             <a href="" class="botaoPrincipal">Ok</a>
@@ -301,21 +301,21 @@
 
 <!-- RODAPÉ -->
 <footer>
-    <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+    <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
     <section class="seçoes" aria-label="Links úteis">
         <a href="">Sobre Nós</a>
-        <a href="">Suporte e Ajuda</a>
+        <a href="">Atendimento</a>
         <a href="">Políticas de Devolução</a>
         <a href="">Políticas de Privacidade</a>
     </section>
     <section class="seçoes" aria-label="Formas de pagamento">
         <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
         <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
-            <img src="Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
-            <img src="Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
-            <img src="Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
-            <img src="Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
-            <img src="Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+            <img src="../Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+            <img src="../Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+            <img src="../Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+            <img src="../Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+            <img src="../Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
         </div>
     </section>
     <p>2025 Libris. Todos os Direitos Reservados.</p>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Libris | Produtos - Livros</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/png" href="Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
 </head>
 <body>
@@ -15,13 +15,13 @@
         <div class="menu1" aria-label="Barra superior com logo, busca, idioma e tema">
             <!-- Logo -->
             <a href="home_user_logado.html">
-                <img src="Midia/Logo/logo.png" alt="Logo da Libris"/>
+                <img src="../Midia/Logo/logo.png" alt="Logo da Libris"/>
             </a>
             <!-- Barra de pesquisa -->
             <form class="barraPesquisa" aria-label="Barra de pesquisa">
                 <input type="search" placeholder="Pesquise por um livro, autor, editora, entre outros" aria-label="Pesquise por livro, autor, editora, entre outros"/>
                 <button>
-                    <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                    <img src="../Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
                 </button>
             </form>
             <!-- Seletor de idioma -->
@@ -35,15 +35,15 @@
             <input type="checkbox" class="esconder" id="toggle"/>
             <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
                 <div class="circle" aria-label="Ícone de sol/lua">
-                    <img src="Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
-                    <img src="Midia/Icones/moon_icon.svg" alt="Lua" class="icon"/>
+                    <img src="../Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
+                    <img src="../Midia/Icones/moon_icon.svg" alt="Lua" class="icon"/>
                 </div>
             </label>
         </div>
         <!-- Parte 2 -->
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
-                <li id="itemAtivo" class="linkNav"><a href="home_user_logado.html">Home</a></li>
+                <li class="linkNav" id="linkHover"><a href="home_user_logado.html">Home</a></li>
                 <li class="linkNav" id="dropdownItem">
                     Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
@@ -53,21 +53,21 @@
                 </li>
                 <li class="linkIcone">
                     <a href="carrinho_user_logado.html">
-                        <img src="Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
+                        <img src="../Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
                 <li id="dropdownItens2">
-                    <img src="Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
+                    <img src="../Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
                     <div class="dropdown" id="drop2" aria-label="Menu suspenso">
                         <a href="perfil.html">Ver perfil</a>
                         <a href="pedidos.html">Meus pedidos</a>
                         <a href="fav.html">Meus favoritos</a>
-                        <a href="index.html">Sair</a>
+                        <a href="../index.html">Sair</a>
                     </div>
                 </li>
                 <li class="linkIcone">
                     <a href="config_user_logado.html">
-                        <img src="Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
+                        <img src="../Midia/Icones/settings_icon.svg" alt="Configurações" class="icon"/>
                     </a>
                 </li>
             </ul>
@@ -157,7 +157,7 @@
                 <form class="barraPesquisa" aria-label="Barra de pesquisa">
                     <input type="search" placeholder="Pesquise por uma editora" aria-label="Pesquise uma editora"/>
                     <button>
-                        <img src="Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                        <img src="../Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
                     </button>
                 </form>
             </section>
@@ -213,17 +213,17 @@
                 <label>
                     <input type="checkbox"/>
                     Livre para todas as idades
-                    <img src="Midia/Icones/classificaçaoL.png" alt="Ícone de classificação livre" class="icon"/>
+                    <img src="../Midia/Icones/classificaçaoL.png" alt="Ícone de classificação livre" class="icon"/>
                 </label>
                 <label>
                     <input type="checkbox"/>
                     Não recomendado para menores de 14 anos
-                    <img src="Midia/Icones/classificaçao14.png" alt="Ícone de classificação para maiores de 14 anos" class="icon"/>
+                    <img src="../Midia/Icones/classificaçao14.png" alt="Ícone de classificação para maiores de 14 anos" class="icon"/>
                 </label>
                 <label>
                     <input type="checkbox"/>
                     Não recomendado para menores de 18 anos
-                    <img src="Midia/Icones/classificaçao18.png" alt="Ícone de classificação para maiores de 18 anos" class="icon"/>
+                    <img src="../Midia/Icones/classificaçao18.png" alt="Ícone de classificação para maiores de 18 anos" class="icon"/>
                 </label>
             </section>
         </aside>
@@ -237,13 +237,13 @@
                 <article class="cardVertical">
                     <a href="asasReluzentes_user_logado.html" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzantes" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzantes" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito" class="favCheckbox"/>
                             <label for="favorito" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do prduto">
@@ -252,7 +252,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -262,13 +262,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_bibliotecaMeiaNoite.jpg" alt="Livro A Bilioteca da Meia Noite" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_bibliotecaMeiaNoite.jpg" alt="Livro A Bilioteca da Meia Noite" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito1" class="favCheckbox"/>
                             <label for="favorito1" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -277,7 +277,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -287,13 +287,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_assimQueAcaba.jpg" alt="Livro É Assim que Acaba, volume 1 e marcador de página" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_assimQueAcaba.jpg" alt="Livro É Assim que Acaba, volume 1 e marcador de página" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito2" class="favCheckbox"/>
                             <label for="favorito2" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -302,7 +302,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -316,13 +316,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_amorGelato.jpg" alt="Livro Amor e Gelato, volume 1" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_amorGelato.jpg" alt="Livro Amor e Gelato, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito3" class="favCheckbox"/>
                             <label for="favorito3" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -331,7 +331,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -341,13 +341,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_aMetamorfose.jpg" alt="Livro A Metamorfose" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_aMetamorfose.jpg" alt="Livro A Metamorfose" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito4" class="favCheckbox"/>
                             <label for="favorito4" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -356,7 +356,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -367,13 +367,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_Selecao.jpg" alt="Livro A Seleção, volume 1" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_Selecao.jpg" alt="Livro A Seleção, volume 1" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito5" class="favCheckbox"/>
                             <label for="favorito5" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido " class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido " class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -382,7 +382,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -396,13 +396,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_aElite.jpg" alt="Livro A Elite, volume 2" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_aElite.jpg" alt="Livro A Elite, volume 2" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito6" class="favCheckbox"/>
                             <label for="favorito6" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -411,7 +411,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -421,13 +421,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_aEscolha.jpg" alt="Livro A Escolha, volume 3" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_aEscolha.jpg" alt="Livro A Escolha, volume 3" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito7" class="favCheckbox"/>
                             <label for="favorito7" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -436,7 +436,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -446,13 +446,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_cidadesPapel.jpg" alt="Livro Cidades de Papel" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_cidadesPapel.jpg" alt="Livro Cidades de Papel" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito9" class="favCheckbox"/>
                             <label for="favorito9" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -461,7 +461,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -475,13 +475,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_evelynHugo.jpg" alt="Livro Os Sete Maridos de Evelyn Hugo" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_evelynHugo.jpg" alt="Livro Os Sete Maridos de Evelyn Hugo" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito10" class="favCheckbox"/>
                             <label for="favorito10" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartIcon2"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração " class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartDefault"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -490,7 +490,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -500,13 +500,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/livro_cronicasBane.jpg" alt="Livro As Crônicas de Bane" class="imgProduto"/>
+                            <img src="../Midia/Produtos/livro_cronicasBane.jpg" alt="Livro As Crônicas de Bane" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito11" class="favCheckbox"/>
                             <label for="favorito11" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -515,7 +515,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -525,13 +525,13 @@
                 <article class="cardVertical">
                     <a href="" class="cardProduto">
                         <div class="imageBg" aria-label="Imagem do produto">
-                            <img src="Midia/Produtos/box_harryPotter.jpg" alt="Box de Harry Potter, volume 1 ao 7 e marcador de página" class="imgProduto"/>
+                            <img src="../Midia/Produtos/box_harryPotter.jpg" alt="Box de Harry Potter, volume 1 ao 7 e marcador de página" class="imgProduto"/>
                             <!-- Ícone de favorito -->
                             <input type="checkbox" id="favorito8" class="favCheckbox"/>
                             <label for="favorito8" class="heartIcon" aria-label="Adicionar/remover item dos favoritos">
                                 <span class="circleBg"></span>
-                                <img src="Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
-                                <img src="Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
+                                <img src="../Midia/Icones/heart_icon.svg" alt="Ícone de coração" class="heartDefault"/>
+                                <img src="../Midia/Icones/heart_icon2.svg" alt="Coração preenchido" class="heartIcon2"/>
                             </label>
                         </div>
                         <div class="conteudoCard" aria-label="Informações do produto">
@@ -540,7 +540,7 @@
                             <div aria-label="Seção com botões" class="botoesAçao">
                                 <button class="botao2">Saber mais</button>
                                 <a href="#popup2"><button class="botaoPrincipal">
-                                    <img src="Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
+                                    <img src="../Midia/Icones/cart_icon.svg" alt="Ícone de carrinho"/>
                                 </button></a>
                             </div>
                         </div>
@@ -553,7 +553,7 @@
     <!-- POP UP -->
     <aside class="popUp" id="popup2">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <img src="Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <img src="../Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
             <h1>Produto adicionado ao seu carrinho!</h1>
             <p>O produto foi adicionado ao seu carrinho. Revise-o e finalize a sua compra!</p>
             <a href="" class="botaoPrincipal">Ok</a>
@@ -563,31 +563,31 @@
     <!-- PAGINAÇÃO -->
     <nav aria-label="Navegação de páginas" class="navPag">
         <button>
-            <img src="Midia/Icones/arrow_icon2.svg" alt="Página anterior"/>
+            <img src="../Midia/Icones/arrow_icon2.svg" alt="Página anterior"/>
         </button>
         <p>01</p>
         <button>
-            <img src="Midia/Icones/arrow_icon3.svg" alt="Próxima página"/>
+            <img src="../Midia/Icones/arrow_icon3.svg" alt="Próxima página"/>
         </button>
     </nav>
 
     <!-- RODAPÉ -->
     <footer>
-        <img src="Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
         <section class="seçoes" aria-label="Links úteis">
             <a href="">Sobre Nós</a>
-            <a href="">Suporte e Ajuda</a>
+            <a href="">Atendimento</a>
             <a href="">Políticas de Devolução</a>
             <a href="">Políticas de Privacidade</a>
         </section>
         <section class="seçoes" aria-label="Formas de pagamento">
             <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
             <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
-                <img src="Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
-                <img src="Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
-                <img src="Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
-                <img src="Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
-                <img src="Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
             </div>
         </section>
         <p>2025 Libris. Todos os Direitos Reservados.</p>
