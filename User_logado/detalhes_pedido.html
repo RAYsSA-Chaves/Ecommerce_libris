@@ -84,7 +84,7 @@
     </nav>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main>
+    <main class="statusPedido">
         <section>
             <h1>Status do pedido</h1>
             <div class="timeline">
@@ -92,42 +92,99 @@
                     <li class="statusAtivo">
                         <figure>
                             <img src="../Midia/Icones/Status_pagamento icon2.svg" alt="Pagamento aprovado"/>
-                            <img src="../Midia/Icones/circle-check_icon.svg" alt="Confirmado" class="icon"/>
+                            <img src="../Midia/Icones/brown_circle-check_icon.svg" alt="Confirmado" class="icon"/>
                             <figcaption>Pagamento<br/>aprovado</figcaption>
                         </figure>
                     </li>
                     <li class="status">
                         <fieldset>
                             <img src="../Midia/Icones/Status_preparando icon.svg" alt="Preparando pedido"/>
-                            <img src="../Midia/Icones/circle-check_icon.svg" alt="Confirmado" class="icon"/>
+                            <img src="../Midia/Icones/gray_circle-check_icon.svg" alt="Confirmado" class="icon"/>
                             <figcaption>Preparando<br/>pedido</figcaption>
                         </fieldset>
                     </li>
                     <li class="status">
                         <fieldset>
                             <img src="../Midia/Icones/Status_enviado icon.svg" alt="Pedido enviado"/>
-                            <img src="../Midia/Icones/circle-check_icon.svg" alt="Confirmado" class="icon"/>
+                            <img src="../Midia/Icones/gray_circle-check_icon.svg" alt="Confirmado" class="icon"/>
                             <figcaption>Pedido<br/>enviado</figcaption>
                         </fieldset>
                     </li>
                     <li class="status">
                         <fieldset>
                             <img src="../Midia/Icones/Status_entregue icon.svg" alt="Pedido entregue"/>
-                            <img src="../Midia/Icones/circle-check_icon.svg" alt="Confirmado" class="icon"/>
+                            <img src="../Midia/Icones/gray_circle-check_icon.svg" alt="Confirmado" class="icon"/>
                             <figcaption>Pedido<br/>entregue</figcaption>
                         </fieldset>
                     </li>
                 </ol>
             </div>
+            <p><strong>Seu pagamento foi aprovado.</strong></p>
+            <p>Seu pedido será preparado para envio o mais breve possível!</p>
+            <p>Prazo estimado para entrega: até 15/06/2025.</p>
         </section>
 
         <section class="pedidosFinalizados">
-            <h1>Pedidos finalizados</h1>
-            <hr class="separador"/>
+            <h1>Detalhes do pedido</h1>
             <br/>
-            <p>Não há pedidos finalizados ainda. Acompanhe seus pedidos atuais.</p>
+            <p><strong>Itens: </strong>Asas Reluzentes, Invencível vol. 1</p>
+            <p><strong>Total: </strong>R$ 95,89</p>
+            <p><strong>ID: </strong>B845671</p>
+            <p><strong>Código de rastreio: </strong>AB123456789BR</p>
+            <p><strong>Data: </strong>12/06/2025</p>
+            <p><strong>Envio: </strong>Rápido (em até 3 dias úteis)</p>
+            <p><strong>CEP de entrega: </strong>13036-210</p>
+            <p><strong>Endereço da entrega: </strong>Rua Pastor Cicero Canuto de Lima, 71, São Bernardo - Vila Rialto, Campinas-SP.</p>
+        </section>
+
+        <section>
+            <h1>Suporte e Ajuda</h1>
+            <br/>
+            <p>Contate-nos:</p>
+            <br/>
+            <div class="display">
+                <img src="../Midia/Icones/gmail_icon.png" alt="Ícone de e-mail" class="icon1"/>
+                <p>libriscommerce@gmail.com</p>
+            </div>
+            <div class="display">
+                <img src="../Midia/Icones/zap_icon.png" alt="Ícone de e-mail" class="icon1"/>
+                <p>(19) 3772-1840</p>
+            </div>
+        </section>
+
+        <section class="cancelamento">
+            <h1>Cancelar pedido</h1>
+            <a href="#popup2" class="botao2">Cancelar pedido</a>
         </section>
     </main>
+
+    <!-- POP UP DE MOTIVO PARA CANCELAR PEDIDO -->
+    <aside class="popUp" id="popup2">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <h1>Cancelar pedido?</h1>
+            <br/>
+            <label for="motivo">Por favor, conte-nos o motivo do cancelamento</label>
+            <input type="text" name="motivo" id="motivo" placeholder="Escreva aqui o motivo do cancelamento"/>
+            <br/>
+            <div class="display" aria-label="Botões de ação">
+                <a href="#popup1" class="botaoPrincipal">Cancelar pedido</a>
+                <a href="detalhes_pedido.html" class="botao2">Voltar</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- POP UP DE CONFIRMAÇÃO DE CANCELAMENTO -->
+    <aside class="popUp" id="popup1">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <h1>Pedido cancelado</h1>
+            <p>Seu pedido foi cancelado.</p>
+            <p>O reembolso será efetuado em até 5 dias úteis.</p>
+            <br/>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="detalhes_pedido.html" class="botaoPrincipal">Ok</a>
+            </div>
+        </div>
+    </aside>
 
     <!-- RODAPÉ -->
     <footer>
