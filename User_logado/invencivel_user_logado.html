@@ -25,14 +25,14 @@
                 </button>
             </form>
             <!-- Seletor de idioma -->
-            <select aria-label="Escolha um idioma">
+            <select aria-label="Escolha um idioma" tabindex="0">
                 <option value="Português">&#x1f1e7; Português - BR</option>
                 <option value="Inglês">&#x1f1fa; English</option>
                 <option value="Espanhol">&#x1f1ea; Español</option>
                 <option value="Japonês">&#x1f1ef; 日本語</option>
             </select>
             <!-- Toggle de tema -->
-            <input type="checkbox" class="esconder" id="toggle"/>
+            <input type="checkbox" class="esconder" id="toggle" tabindex="0"/>
             <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
                 <div class="circle" aria-label="Ícone de sol/lua">
                     <img src="../Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
@@ -44,7 +44,7 @@
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
                 <li class="linkNav" id="linkHover"><a href="home_user_logado.html">Home</a></li>
-                <li class="linkNav" id="dropdownItem">
+                <li class="linkNav" id="dropdownItem" tabindex="0">
                     Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
                         <a href="livros_user_logado.html">Livros</a>
@@ -56,7 +56,7 @@
                         <img src="../Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
-                <li id="dropdownItens2">
+                <li id="dropdownItens2" tabindex="0">
                     <img src="../Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
                     <div class="dropdown" id="drop2" aria-label="Menu suspenso">
                         <a href="perfil.html">Ver perfil</a>
@@ -108,7 +108,7 @@
                 <p class="preço">R$ 19,99</p>
                 <p id="textoClaro">59 em estoque</p>
                 <form class="barraPesquisa" id="consultaCep" aria-label="Consultar frete">
-                    <input type="number" min="8" max="8" placeholder="Digite seu CEP" aria-label="Digite seu CEP para consultar o frete"/>
+                    <input type="number" placeholder="Digite seu CEP" aria-label="Digite seu CEP para consultar o frete"/>
                     <button>Consultar frete</button>
                 </form>
                 <p>Frete: R$ 00,00</p>
@@ -245,28 +245,28 @@
         </div>
     </aside>
 
-<!-- RODAPÉ -->
-<footer>
-    <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
-    <section class="seçoes" aria-label="Links úteis">
-        <a href="">Sobre Nós</a>
-        <a href="">Atendimento</a>
-        <a href="">Políticas de Devolução</a>
-        <a href="">Políticas de Privacidade</a>
-    </section>
-    <section class="seçoes" aria-label="Formas de pagamento">
-        <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
-        <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
-            <img src="../Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
-            <img src="../Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
-            <img src="../Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
-            <img src="../Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
-            <img src="../Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
-        </div>
-    </section>
-    <p>2025 Libris. Todos os Direitos Reservados.</p>
-    <br/><br/>
-    <p>Desenvolvido por Rayssa Chaves.</p>
-</footer>
+    <!-- RODAPÉ -->
+    <footer>
+        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        <section class="seçoes" aria-label="Links úteis">
+            <a href="sobre_user_logado.html">Sobre Nós</a>
+            <a href="atendimento_user_logado.html">Atendimento</a>
+            <a href="politicasDevolucao_user_logado.html">Políticas de Devolução</a>
+            <a href="politicasPrivacidade_user_logado.html">Políticas de Privacidade</a>
+        </section>
+        <section class="seçoes" aria-label="Formas de pagamento">
+            <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
+            <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
+                <img src="../Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+            </div>
+        </section>
+        <p>2025 Libris. Todos os Direitos Reservados.</p>
+        <br/><br/>
+        <p>Desenvolvido por Rayssa Chaves.</p>
+    </footer>
 </body>
 </html>

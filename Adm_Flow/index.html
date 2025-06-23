@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Login Adm</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="semNav" id="fundoPreto">
+        <a href="">
+            <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        </a>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoForms">
+        <!-- Ilustração -->
+        <aside class="ilustracao">
+            <img src="../Midia/Ilustraçoes/img_fundo3.png" alt="Ilustração de um menino em cima de uma pilha de livros acenando e ao lado de outra pilha com engrenagens de configurações e cifrão acima"/>
+        </aside>
+        <!-- Formulário -->
+        <form action="home_adm.html" class="formsLogin" aria-label="Formulário de Login">
+            <h1>Bem vindo(a) de volta, ADM!</h1>
+            <h2>Faça login para acessar a administração da Libris</h2>
+            <fieldset>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="Digite seu e-mail" required/>
+            </fieldset>
+            <fieldset>
+                <label for="senha">Senha</label>
+                <input type="password" minlength="8" name="senha" placeholder="Degite sua senha" required/>
+            </fieldset>
+            <input type="submit" value="Entrar" class="botaoPrincipal"/>
+        </form>
+    </main>
+</body>
+</html>

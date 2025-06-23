@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Produtos</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li><a href="home_adm.html">Home</a></li>
+                <li id="ativo"><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+                <li><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm">
+        <h1>Produtos</h1>
+        <hr class="separador"/>
+        <div class="display" id="produtosCabeçalho">
+            <p>16.204 produtos</p>
+            <a href="add_produto.html" class="botaoPrincipal">Adicionar produto</a>
+        </div>
+        <br/><br/>
+
+        <div class="display" id="produtosCabeçalho">
+            <form class="barraPesquisa" aria-label="Barra de pesquisa" id="barraPreta">
+                <input type="search" placeholder="Pesquise por um livro, autor ou editora" aria-label="Pesquise por livro, autor ou editora"/>
+                <button>
+                    <img src="../Midia/Icones/search_icon.svg" alt="Buscar" class="icon"/>
+                </button>
+            </form>
+            <label class="displayCheck">
+                <input type="checkbox"/>
+                Ver somente indisponíveis
+            </label>
+            <label class="displayCheck">
+                <input type="checkbox"/>
+                Dúvidas pendentes
+            </label>
+        </div>
+        <br/><br/><br/>
+
+        <table id="carrinho" class="tabelaCinza">
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+                <th id="duvidasTh">Dúvidas pendentes</th>
+                <th>Modificado</th>
+                <th>Ações</th>
+            </tr>
+            <!-- Produto 1 -->
+            <tr>
+                <td class="display">
+                    <img src="../Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzentes"/>
+                    <p>Asas Reluzentes</p>
+                </td>
+                <td>R$ 69,90</td>
+                <td class="verde">106</td>
+                <td>SIM</td>
+                <td>19/06/2025</td>
+                <td>
+                    <div class="display">
+                        <a href="detalhes_produto_adm.html">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="edicao_produto.html">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="#popup2">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <!-- Produto 2 -->
+            <tr>
+                <td class="display">
+                    <img src="../Midia/Produtos/box_harryPotter.jpg" alt="Box Harry Potter, volume 1 ao 7"/>
+                    <p>Box Harry Potter, vol. 1 ao 7</p>
+                </td>
+                <td>R$ 249,90</td>
+                <td class="vermelho">Indisponível</td>
+                <td>SIM</td>
+                <td>02/05/2025</td>
+                <td>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="#popup2">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <!-- Produto 3 -->
+            <tr>
+                <td class="display">
+                    <img src="../Midia/Produtos/manga_onePunchMan.png" alt="One Punch Man, volume 1"/>
+                    <p>One Punch Man, vol. 1</p>
+                </td>
+                <td>R$ 34,50</td>
+                <td class="verde">31</td>
+                <td>Não</td>
+                <td>06/06/2025</td>
+                <td>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="#popup2">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <!-- Produto 4 -->
+            <tr>
+                <td class="display">
+                    <img src="../Midia/Produtos/hq_kickAss.jpg" alt="HQ Kick Ass, volume 1"/>
+                    <p>Kick Ass, vol. 1</p>
+                </td>
+                <td>R$ 38,99</td>
+                <td class="verde">54</td>
+                <td>Não</td>
+                <td>01/06/2025</td>
+                <td>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="#popup2">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+            <!-- Produto 5 -->
+            <tr>
+                <td class="display">
+                    <img src="../Midia/Produtos/livro_bibliotecaMeiaNoite.jpg" alt="Livro A Biblioteca da Meia Noite"/>
+                    <p>A Biblioteca da Meia Noite</p>
+                </td>
+                <td>R$ 40,00</td>
+                <td class="verde">78</td>
+                <td>SIM</td>
+                <td>27/05/2025</td>
+                <td>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="#popup2">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Link para ver mais -->
+        <p class="verMais">Ver mais</p>
+    </main>
+
+    <!-- POP UP DE CONFIRMAÇÃO PARA EXCLUIR PRODUTO -->
+    <aside class="popUp" id="popup2">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <br/>
+            <h1>Excluir produto?</h1>
+            <p>Tem certeza de que deseja excluir o produto do catálogo da Libris?</p>
+            <br/>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="#popup1" class="botaoPrincipal">Sim</a>
+                <a href="produtos.html" class="botao2">Não</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- POP UP DE EXCLUSÃO DO PRODUTO -->
+    <aside class="popUp" id="popup1">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <br/>
+            <h1>Produto excluído</h1>
+            <p>O produto foi excluído com sucesso e não existe mais no catálogo da Libris.</p>
+            <br/>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="produtos.html" class="botaoPrincipal">Ok</a>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>

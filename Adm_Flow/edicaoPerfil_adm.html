@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Perfil Adm - Editar perfil</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li><a href="home_adm.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+                <li><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm">
+        <!-- CANCELAR -->
+        <nav class="caminho">
+            <ul class="setasInvertidas">
+                <li><a href="perfil_adm.html" class="link">Cancelar</a></li>
+            </ul>
+        </nav>
+        <form action="" class="formAdm">
+            <section class="secaoPerfil">
+                <h1>Editar perfil</h1>
+                <!-- Editar foto -->
+                <h2>Foto de perfil</h2>
+                <div class="fotoEditar" tabindex="0">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="icon2"/>
+                    <div class="overlayFoto" aria-label="Editar foto de perfil">
+                        <img src="../Midia/Icones/pen_icon.svg" alt="Ícone de lápis para editar" class="icon"/>
+                    </div>
+                </div>
+                <!-- Editar nome -->
+                <label for="nome">
+                    <h2>Nome</h2>
+                </label>
+                <input type="text" name="nome" id="nome" placeholder="Samuel"/>
+                <!-- Editar sobrenome -->
+                <label for="sobrenome">
+                    <h2>Sobrenome</h2>
+                </label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="de Melo"/>
+                <!-- Editar telefone -->
+                <label for="tel">
+                    <h2>Telefone/celular</h2>
+                </label>
+                <input type="tel" name="tel" id="tel" placeholder="(19) 995582354"/>
+            </section>
+
+            <section class="secaoPerfil">
+                <h1>Editar login</h1>
+                <br/><br/>
+                <p class="alert">
+                    <img src="../Midia/Icones/alert_icon.svg" alt="Alerta" class="icon"/>
+                Sua senha deve conter no mínimo 08 caracteres.
+                </p>
+                <label for="email">
+                    <h2>E-mail</h2>
+                </label>
+                <input type="email" name="email" id="email" placeholder="samuel.adm@gmal.com" class="tamanhoNormal" disabled/>
+                <!-- Editar senha -->
+                <label for="senha">
+                    <h2>Senha</h2>
+                </label>
+                <input type="senha" minlength="8" name="senha" id="senha" placeholder="SAMUCA.057"/>
+                <label for="confirmarSenha">
+                    <h2>Confirme a nova senha</h2>
+                </label>
+                <input type="senha" minlength="8" name="confirmarSenha" id="confirmarSenha" placeholder="Digite a senha novamente"/>
+            </section>
+            <input type="submit" name="atualizar" id="atualizar" value="Editar" class="botaoPrincipal"/>
+        </form>
+    </main>
+</body>
+</html>

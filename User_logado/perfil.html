@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Libris | Detalhes do pedido</title>
+    <title>Libris | Perfil </title>
     <link rel="stylesheet" href="../style.css"/>
     <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
@@ -25,14 +25,14 @@
                 </button>
             </form>
             <!-- Seletor de idioma -->
-            <select aria-label="Escolha um idioma">
+            <select aria-label="Escolha um idioma" tabindex="0">
                 <option value="Português">&#x1f1e7; Português - BR</option>
                 <option value="Inglês">&#x1f1fa; English</option>
                 <option value="Espanhol">&#x1f1ea; Español</option>
                 <option value="Japonês">&#x1f1ef; 日本語</option>
             </select>
             <!-- Toggle de tema -->
-            <input type="checkbox" class="esconder" id="toggle"/>
+            <input type="checkbox" class="esconder" id="toggle" tabindex="0"/>
             <label for="toggle" class="slider" aria-label="Alterar para modo escuro/claro">
                 <div class="circle" aria-label="Ícone de sol/lua">
                     <img src="../Midia/Icones/sun_icon.svg" alt="Sol" class="icon"/>
@@ -44,7 +44,7 @@
         <nav aria-label="Barra inferior com navegação">
             <ul class="menu2">
                 <li class="linkNav" id="linkHover"><a href="home_user_logado.html">Home</a></li>
-                <li class="linkNav" id="dropdownItem">
+                <li class="linkNav" id="dropdownItem" tabindex="0">
                     Produtos
                     <div class="dropdown" aria-label="Menu suspenso">
                         <a href="livros_user_logado.html">Livros</a>
@@ -56,7 +56,7 @@
                         <img src="../Midia/Icones/cart_icon.svg" alt="Carrinho" class="icon"/>
                     </a>
                 </li>
-                <li id="dropdownItens2">
+                <li id="dropdownItens2" tabindex="0">
                     <img src="../Midia/Icones/user_icon.svg" class="icon" id="iconPerfil"/>
                     <div class="dropdown" id="drop2" aria-label="Menu suspenso">
                         <a href="perfil.html">Ver perfil</a>
@@ -78,114 +78,93 @@
     <nav class="caminho">
         <ul>
             <li><a href="home_user_logado.html" class="link">Home</a></li>
-            <li><a href="home_user_logado.html" class="link">Meus Pedidos</a></li>
-            <li>Detalhes do pedido</li>
+            <li>Perfil</li>
         </ul>
     </nav>
 
     <!-- CONTEÚDO PRINCIPAL -->
-    <main class="statusPedido">
-        <!-- Status -->
-        <section>
-            <h1>Status do pedido</h1>
-            <div class="timeline">
-                <ol>
-                    <li class="statusAtivo">
-                        <figure>
-                            <img src="../Midia/Icones/Status_pagamento icon2.svg" alt="Pagamento aprovado"/>
-                            <img src="../Midia/Icones/brown_circle-check_icon.svg" alt="Confirmado" class="icon"/>
-                            <figcaption>Pagamento<br/>aprovado</figcaption>
-                        </figure>
-                    </li>
-                    <li class="status">
-                        <figure>
-                            <img src="../Midia/Icones/Status_preparando icon.svg" alt="Preparando pedido"/>
-                            <img src="../Midia/Icones/gray_circle-check_icon.svg" alt="Confirmado" class="icon"/>
-                            <figcaption>Preparando<br/>pedido</figcaption>
-                        </figure>
-                    </li>
-                    <li class="status">
-                        <figure>
-                            <img src="../Midia/Icones/Status_enviado icon.svg" alt="Pedido enviado"/>
-                            <img src="../Midia/Icones/gray_circle-check_icon.svg" alt="Confirmado" class="icon"/>
-                            <figcaption>Pedido<br/>enviado</figcaption>
-                        </figure>
-                    </li>
-                    <li class="status">
-                        <figure>
-                            <img src="../Midia/Icones/Status_entregue icon.svg" alt="Pedido entregue"/>
-                            <img src="../Midia/Icones/gray_circle-check_icon.svg" alt="Confirmado" class="icon"/>
-                            <figcaption>Pedido<br/>entregue</figcaption>
-                        </figure>
-                    </li>
-                </ol>
-            </div>
-            <p><strong>Seu pagamento foi aprovado.</strong></p>
-            <p>Seu pedido será preparado para envio o mais breve possível!</p>
-            <p>Prazo estimado para entrega: até 15/06/2025.</p>
-        </section>
-
-        <!-- Detalhes -->
-        <section class="pedidosFinalizados">
-            <h1>Detalhes do pedido</h1>
-            <br/>
-            <p><strong>Itens: </strong>Asas Reluzentes, Invencível vol. 1</p>
-            <p><strong>Total: </strong>R$ 89,89</p>
-            <p><strong>ID: </strong>B845671</p>
-            <p><strong>Código de rastreio: </strong>AB123456789BR</p>
-            <p><strong>Data: </strong>12/06/2025</p>
-            <p><strong>Envio: </strong>Rápido (em até 3 dias úteis)</p>
-            <p><strong>CEP de entrega: </strong>13036-210</p>
-            <p><strong>Endereço da entrega: </strong>Rua Pastor Cicero Canuto de Lima, 71, São Bernardo - Vila Rialto, Campinas-SP.</p>
-        </section>
-
-        <!-- Contato -->
-        <section>
-            <h1>Suporte e Ajuda</h1>
-            <br/>
-            <p>Contate-nos:</p>
-            <br/>
+    <main class="mainPerfil">
+        <h1>Meu perfil</h1>
+        <!-- Infos pessoais -->
+        <section class="secaoPerfil">
             <div class="display">
-                <img src="../Midia/Icones/gmail_icon.png" alt="Ícone de e-mail" class="icon1"/>
-                <p>libriscommerce@gmail.com</p>
+                <h2>Informações pessoais</h2>
+                <a href="edicaoPerfil.html">
+                    Editar
+                    <img src="../Midia/Icones/pen_icon.svg" alt="Ícone de lápis para editar" class="icon"/>
+                </a>
             </div>
-            <div class="display">
-                <img src="../Midia/Icones/zap_icon.png" alt="Ícone de whatsapp" class="icon1"/>
-                <p>(19) 3772-1840</p>
+            <div class="display" id="infosPerfil">
+                <img src="../Midia/Icones/user_img.png" alt="Foto de perfil do usuário" class="icon2"/>
+                <div>
+                    <p><strong>Nome: </strong>Ynae</p>
+                    <p><strong>Sobrenome: </strong>de Araújo</p>
+                    <p><strong>Telefone/celular: </strong>-</p>
+                    <p><strong>CPF: </strong>4320575401</p>
+                </div>
             </div>
         </section>
 
-        <!-- Cancelar pedido -->
-        <section class="cancelamento">
-            <h1>Cancelar pedido</h1>
-            <a href="#popup2" class="botao2">Cancelar pedido</a>
+        <!-- Endereços -->
+        <section class="secaoPerfil">
+            <div class="display">
+                <h2>Meus endereços</h2>
+                <a href="edicaoEndereços.html">
+                    Editar
+                    <img src="../Midia/Icones/pen_icon.svg" alt="Ícone de lápis para editar" class="icon"/>
+                </a>
+            </div>
+            <div class="display" id="infosPerfil">
+                <p>Não há endereços adiciondos ainda.</p>
+            </div>
+        </section>
+
+        <!-- Cartões -->
+        <section class="secaoPerfil">
+            <div class="display">
+                <h2>Meus cartões</h2>
+                <a href="ediçaoCartoes.html">
+                    Editar
+                    <img src="../Midia/Icones/pen_icon.svg" alt="Ícone de lápis para editar" class="icon"/>
+                </a>
+            </div>
+            <div class="display" id="infosPerfil">
+                <p>Não há cartões adiciondos ainda.</p>
+            </div>
+        </section>
+
+        <!-- Excluir conta -->
+        <section class="secaoPerfil">
+                <h2><a href="#popup2">Excluir conta</a></h2>
+        </section>
+
+        <!-- Sair -->
+        <section class="secaoPerfil">
+                <h2><a href="../index.html">Sair</a></h2>
         </section>
     </main>
 
-    <!-- POP UP DE MOTIVO PARA CANCELAR PEDIDO -->
+    <!-- POP UP DE CONFIRMAÇÃO PARA EXCLUIR CONTA -->
     <aside class="popUp" id="popup2">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <h1>Cancelar pedido?</h1>
+            <h1>Excluir conta?</h1>
+            <p>Tem certeza de que deseja excluir a sua conta?</p>
             <br/>
-            <label for="motivo">Por favor, conte-nos o motivo do cancelamento</label>
-            <input type="text" name="motivo" id="motivo" placeholder="Escreva aqui o motivo do cancelamento"/>
-            <br/>
-            <div class="display" aria-label="Botões de ação">
-                <a href="#popup1" class="botaoPrincipal">Cancelar pedido</a>
-                <a href="detalhes_pedido.html" class="botao2">Voltar</a>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="#popup1" class="botaoPrincipal">Sim</a>
+                <a href="config_user_logado.html" class="botao2">Não</a>
             </div>
         </div>
     </aside>
 
-    <!-- POP UP DE CONFIRMAÇÃO DE CANCELAMENTO -->
+    <!-- POP UP DE EXCLUSÃO DA CONTA -->
     <aside class="popUp" id="popup1">
         <div class="popupConteudo" aria-label="Mensagem pop up">
-            <h1>Pedido cancelado</h1>
-            <p>Seu pedido foi cancelado.</p>
-            <p>O reembolso será efetuado em até 5 dias úteis.</p>
+            <h1>Conta excluída</h1>
+            <p>Sua conta foi excluída com sucesso.</p>
             <br/>
             <div class="display" aria-label="Botões de açaão">
-                <a href="detalhes_pedido.html" class="botaoPrincipal">Ok</a>
+                <a href="../index.html" class="botaoPrincipal">Ok</a>
             </div>
         </div>
     </aside>

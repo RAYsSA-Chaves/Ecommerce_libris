@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Editar produto - Asas Reluzentes</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li><a href="home_adm.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+                <li><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm" id="produto_page">
+        <!-- CANCELAR -->
+        <nav class="caminho">
+            <ul class="setasInvertidas">
+                <li><a href="produtos.html" class="link">Cancelar</a></li>
+            </ul>
+        </nav>
+        
+        <article class="cardAdm">
+            <h1>Edite o produto - Asas Reluzentes</h1>
+            <br/><br/>
+            <form action="" class="formsLogin" id="cadastroProduto">
+                <section>
+                    <fieldset>
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Asas Reluzentes"/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="autor">Autor</label>
+                        <input type="text" name="autor" id="autor" placeholder="Saft, Alison"/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="editora">Editora</label>
+                        <input type="text" name="editora" id="editora" placeholder="Universo dos Livros"/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="ano">Ano de publicação</label>
+                        <input type="number" name="ano" id="ano" placeholder="2025"/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="qtdPg">Quantidade de páginas</label>
+                        <input type="number" name="qtdPg" id="qtdPg" placeholder="336"/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="tag">Tag</label>
+                        <select name="tag" id="tag" class="comBorda">
+                            <option value="Livro">Livro</option>
+                            <option value="HQ">HQ</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="serie">Série (opcional)</label>
+                        <input type="text" name="serie" id="serie" placeholder="Digite o nome da série literária a qual o livro pertence"/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset class="imagensLivro">
+                        <p>Imagem da capa</p>
+                        <label for="capa" class="botaoUpload">Trocar imagem</label>
+                        <input type="file" name="capa" id="capa" accept="image/*" class="escondido"/>
+                        <div class="preview">
+                            <img src="../Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzentes"/>
+                            <p class="nomeArquivo">livro_asasReluzentes.jpg</p>
+                        </div>
+                    </fieldset>
+                    <fieldset class="imagensLivro">
+                        <p>Imagem da capa</p>
+                        <label for="capa" class="botaoUpload">Trocar imagem</label>
+                        <input type="file" name="capa" id="capa" accept="image/*" class="escondido"/>
+                        <div class="preview">
+                            <img src="../Midia/Produtos/livro_asasReluzentes2.png" alt="Livro Asas Reluzentes"/>
+                            <p class="nomeArquivo">contracapa_asasReluzentes.jpg</p>
+                        </div>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="estado">Estado</label>
+                        <input type="text" name="estado" id="estado" placeholder="NOVO" disabled/>
+                    </fieldset>
+                </section>
+
+                <section class="displayColuna">
+                    <p>Gêneros</p>
+                    <section>
+                        <fieldset>
+                            <label class="displayCheck">
+                                <input type="checkbox" checked/>
+                                Ficção
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox" checked/>
+                                Romance
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Suspense
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Aventura
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Biografia
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox" checked/>
+                                Fantasia
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Educação
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Horror
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Humor
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Infantil
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Drama
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Ação
+                            </label>
+                        </fieldset>
+                    </section>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="altura">Altura</label>
+                        <input type="number" name="altura" id="altura" placeholder="23"/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="largura">Largura</label>
+                        <input type="number" name="largura" id="largura" placeholder="15.7"/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="peso">Peso</label>
+                        <input type="number" name="peso" id="peso" placeholder="500"/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="tipoCapa">Tipo da capa</label>
+                        <select name="tipoCapa" id="tipoCapa" class="comBorda">
+                            <option value="Mole">Mole</option>
+                            <option value="Dura">Dura</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="idioma">Idioma</label>
+                        <select name="idioma" id="idioma" class="comBorda">
+                            <option value="">Português</option>
+                            <option value="Inglês">Inglês</option>
+                            <option value="Espanhol">Espanhol</option>
+                            <option value="Braile">Braile</option>
+                            <option value="Japonês">Japonês</option>
+                            <option value="Mandarim">Mandarim</option>
+                            <option value="Francês">Francês</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="sinopse">Sinope</label>
+                        <textarea name="sinopse" id="sinopse" placeholder="Séculos se passaram desde a última vez em que uma fada das estações quentes no Refúgio das Fadas cruzou a fronteira para o Bosque do Inverno e, enquanto a maioria teme as lendas de monstros espreitando nas terras congeladas, Clarion não consegue deixar de ficar fascinada pela beleza do Inverno. Mas sob os olhos atentos da atual monarca e dos Ministros das Estações da corte, Clarion tem pouco tempo para devaneios enquanto o dia de sua coroação se aproxima.
+                        
+Isto é, até que relatos de um monstro que pode assolar a Primavera vindo do Inverno chegam ao palácio. Derrotar essa ameaça é algo que Clarionvislumbra como uma oprtunidade de provar que é digna de seu novo papel. Mas, em vez de encontrar um monstro na fronteira do Inverno, ela se depara com Milori, um jovem guardião do Bosque do Inverno. Juntos eles criam um vínculo improvável enquanto correm para salvar seus respectivos reinos.
+
+No entento, à medida que a aliança entre ambos evolui para algo mais, eles descobrirão que há uma razão pela qual fadas das estações quentes e do Inverno não devem se misturar. E o preço pode ser tão mortal quanto os monstros que rondam o Bosque do Inverno."></textarea>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="preco">Preço</label>
+                        <input type="number" step="0.01" min="1" name="preco" id="preco" placeholder="69,90"/>
+                    </fieldset>
+                </section>
+
+                <input type="submit" name="cadastrar" id="cadastrar" value="Editar" class="botaoPrincipal"/>
+            </form>
+        </article>
+    </main>
+</body>
+</html>

@@ -55,11 +55,11 @@
                         </fieldset>
                         <fieldset>
                             <label for="vencimento">Vencimento</label>
-                            <input type="text" name="vencimento" placeholder="MM/AA" class="inputMenor" required/>
+                            <input type="text" name="vencimento" inputmode="numeric" pattern="[0-9]{2}/[0-9]{2}" maxlength="5" placeholder="MM/AA" class="inputMenor" title="Digite exatamente 5 caracteres: MM/AA" required/>
                         </fieldset>
                         <fieldset>
                             <label for="cvv">Código de segurança</label>
-                            <input type="number" name="cvv" min="3" max="4" class="inputMenor" placeholder="Digite o código de segurança" required/>
+                            <input type="text" name="cvv" inputmode="numeric" pattern="[0-9]{3,4}" minlength="3" maxlength="4" class="inputMenor" placeholder="Digite o código de segurança" title="O CVV é composto por 3 ou 4 digítos numéricos." required/>
                             <p class="alert">
                                 <img src="../Midia/Icones/alert_icon.svg" alt="Alerta" class="icon"/>
                                 O CVV é um código de três ou quatro dígitos impresso no verso cartão.
@@ -143,10 +143,10 @@
     <footer>
         <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
         <section class="seçoes" aria-label="Links úteis">
-            <a href="">Sobre Nós</a>
-            <a href="">Atendimento</a>
-            <a href="">Políticas de Devolução</a>
-            <a href="">Políticas de Privacidade</a>
+            <a href="sobre_user_logado.html">Sobre Nós</a>
+            <a href="atendimento_user_logado.html">Atendimento</a>
+            <a href="politicasDevolucao_user_logado.html">Políticas de Devolução</a>
+            <a href="politicasPrivacidade_user_logado.html">Políticas de Privacidade</a>
         </section>
         <section class="seçoes" aria-label="Formas de pagamento">
             <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>

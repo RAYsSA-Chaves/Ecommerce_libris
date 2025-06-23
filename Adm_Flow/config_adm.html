@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Pedidos - Adm</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li><a href="home_adm.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li ><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+                <li id="ativo"><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm" id="configPage">
+        <br/>
+        <!-- Configurações de acessibilidade -->
+        <h1>Configurações de acessibilidade</h1>
+        <hr/>
+        <article>
+            <!-- Tema -->
+            <section>
+                <h2>Tema</h2>
+                <select aria-label="Escolha tema para o site" class="comBorda">
+                    <option value="Claro">Claro</option>
+                    <option value="Escuro">Escuro</option>
+                    <option value="Alto contraste">Alto contraste</option>
+                </select>
+            </section>
+            <hr class="linha2"/>
+            <!-- Idioma -->
+            <section>
+                <h2>Idioma</h2>
+                <select aria-label="Escolha um idioma" class="comBorda">
+                    <option value="Português">&#x1f1e7; Português - BR</option>
+                    <option value="Inglês">&#x1f1fa; English</option>
+                    <option value="Espanhol">&#x1f1ea; Español</option>
+                    <option value="Japonês">&#x1f1ef; 日本語</option>
+                </select>
+            </section>
+            <hr class="linha2"/>
+            <!-- Fonte -->
+            <section>
+                <h2>Tamanho da fonte</h2>
+                <div aria-label="Aumentar ou diminuir o tamanho da fonte" class="botaoFonte">
+                    <button>-</button>
+                    <p>Aa</p>
+                    <button>+</button>
+                </div>
+            </section>
+            <hr class="linha2"/>
+            <!-- Animações -->
+            <section>
+                <h2>Reduzir animações</h2>
+                <input type="checkbox" class="esconder" id="toggle2"/>
+                <label for="toggle2" class="slider" id="slider2" aria-label="Ativar ou desativar animações reduzidas">
+                    <span class="bolinha"></span>
+                </label>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

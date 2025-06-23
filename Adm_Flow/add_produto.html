@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Cadastro de novo produto</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li><a href="home_adm.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+                <li><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm" id="produto_page">
+        <!-- CANCELAR    -->
+        <nav class="caminho">
+            <ul class="setasInvertidas">
+                <li><a href="produtos.html" class="link">Cancelar</a></li>
+            </ul>
+        </nav>
+        
+        <article class="cardAdm">
+            <h1>Cadastre um novo produto!</h1>
+            <br/><br/>
+            <form action="#popup2" class="formsLogin" id="cadastroProduto">
+                <section>
+                    <fieldset>
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" placeholder="Digite o título do produto" required/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="autor">Autor</label>
+                        <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor do livro" required/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="editora">Editora</label>
+                        <input type="text" name="editora" id="editora" placeholder="Digite o nome da editora do livro" required/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="ano">Ano de publicação</label>
+                        <input type="number" name="ano" id="ano" placeholder="Digite o ano em que o livro foi publicado" required/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="qtdPg">Quantidade de páginas</label>
+                        <input type="number" name="qtdPg" id="qtdPg" placeholder="Digite quantas páginas o livro tem" required/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="tag">Tag</label>
+                        <select name="tag" id="tag" class="comBorda">
+                            <option value="Livro">Livro</option>
+                            <option value="HQ">HQ</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="serie">Série (opcional)</label>
+                        <input type="text" name="serie" id="serie" placeholder="Digite o nome da série literária a qual o livro pertence"/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="capa">Imagem da capa</label>
+                        <input type="file" name="capa" id="capa" accept="image/*" required/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="img2">Imagens adicionais</label>
+                        <input type="file" name="img2" id="img2" accept="image/*" multiple required/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="estado">Estado</label>
+                        <input type="text" name="estado" id="estado" placeholder="NOVO" disabled/>
+                    </fieldset>
+                </section>
+
+                <section class="displayColuna">
+                    <p>Gêneros</p>
+                    <section>
+                        <fieldset>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Ficção
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Romance
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Suspense
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Aventura
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Biografia
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Fantasia
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Educação
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Horror
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Humor
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Infantil
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Drama
+                            </label>
+                            <label class="displayCheck">
+                                <input type="checkbox"/>
+                                Ação
+                            </label>
+                        </fieldset>
+                    </section>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="altura">Altura</label>
+                        <input type="number" name="altura" id="altura" placeholder="Digite a altura do livro em cm" required/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="largura">Largura</label>
+                        <input type="number" name="largura" id="largura" placeholder="Digite a largura do livro em cm" required/>
+                    </fieldset>
+                    <fieldset>
+                        <label for="peso">Peso</label>
+                        <input type="number" name="peso" id="peso" placeholder="Digite o peso do livro em g" required/>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="tipoCapa">Tipo da capa</label>
+                        <select name="tipoCapa" id="tipoCapa" class="comBorda">
+                            <option value="Dura">Dura</option>
+                            <option value="Mole">Mole</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="idioma">Idioma</label>
+                        <select name="idioma" id="idioma" class="comBorda">
+                            <option value="">Português</option>
+                            <option value="Inglês">Inglês</option>
+                            <option value="Espanhol">Espanhol</option>
+                            <option value="Braile">Braile</option>
+                            <option value="Japonês">Japonês</option>
+                            <option value="Mandarim">Mandarim</option>
+                            <option value="Francês">Francês</option>
+                        </select>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="sinopse">Sinope</label>
+                        <textarea name="sinopse" id="sinopse" placeholder="Escreva a sinopse do livro" required></textarea>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <fieldset>
+                        <label for="preco">Preço</label>
+                        <input type="number" step="0.01" min="1" name="preco" id="preco" placeholder="Digite o valor do produto" required/>
+                    </fieldset>
+                </section>
+
+                <input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar" class="botaoPrincipal"/>
+            </form>
+        </article>
+    </main>
+
+    <!-- POP UP -->
+    <aside class="popUp" id="popup2">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <img src="../Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <h1>Produto cadastrado com sucesso!</h1>
+            <p>O produto foi cadastrado e adicionado ao catálogo da Libris.</p>
+            <a href="produtos.html" class="botaoPrincipal">Ok</a>
+        </div>
+    </aside>
+</body>
+</html>

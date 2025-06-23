@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Perfil - Editar Endereços </title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="semNav">
+        <a href="home_user_logado.html">
+            <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        </a>
+    </header>
+
+    <!-- CAMINHO DA PÁGINA -->
+    <nav class="caminho">
+        <ul>
+            <li><a href="home_user_logado.html" class="link">Home</a></li>
+            <li><a href="perfil.html" class="link">Perfil</a></li>
+            <li>Editar Endereços</li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <h1>Editar Endereços</h1>
+        <br/><br/>
+        <section class="secaoPerfil" id="edicao">
+            <section>
+                <h2>Seus endereços</h2>
+                <p>Não há endereços adicionados ainda.</p>
+                <hr class="separador"/>
+                <br/>
+            </section>
+            <section>
+                <h2>Adicionar um novo endereço</h2>
+                <form action="">
+                    <section class="inputs">
+                        <label for="cep">
+                            <p>CEP</p>
+                        </label>
+                        <input type="number" name="cep" id="cep" placeholder="Digite seu CEP" required/>
+                    </section>
+                    <section class="inputs">
+                        <label for="bairro">
+                            <p>Bairro</h2>
+                        </label>
+                        <input type="text" name="bairro" id="bairro" placeholder="Digite o nome do bairro" required/>
+                    </section>
+                    <section class="inputs">
+                        <label for="ruaAv">
+                            <p>Rua/Avenida</p>
+                        </label>
+                        <input type="text" name="ruaAv" id="ruaAv" placeholder="Digite o nome da rua ou avenida" required/>
+                    </section>
+                    <section class="inputs">
+                        <label for="num">
+                            <p>Número</p>
+                        </label>
+                        <input type="number" name="num" id="num" placeholder="Digite o número da sua residência" required/>
+                    </section>
+                    <section class="inputs">
+                        <label for="complemento">
+                            <p>Complemento (opcional)</p>
+                        </label>
+                        <input type="text" name="complemento" id="complemento" placeholder="Ex: Bloco A, apto 5"/>
+                    </section>
+                    <section class="inputs">
+                        <label for="addInfo">
+                            <p>Informações adicionais (opcional)</p>
+                        </label>
+                        <input type="text" name="addInfo" id="addInfo" placeholder="Ex: Não tem campanhia; cor do edifício, ponto de referência."/>
+                    </section>
+                    <input type="submit" name="atualizar" id="atualizar" value="Adicionar" class="botaoPrincipal"/>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        <section class="seçoes" aria-label="Links úteis">
+            <a href="sobre_user_logado.html">Sobre Nós</a>
+            <a href="atendimento_user_logado.html">Atendimento</a>
+            <a href="politicasDevolucao_user_logado.html">Políticas de Devolução</a>
+            <a href="politicasPrivacidade_user_logado.html">Políticas de Privacidade</a>
+        </section>
+        <section class="seçoes" aria-label="Formas de pagamento">
+            <p class="textoItalico">Aceitamos: Visa, Mastercard e Elo (débito ou crédito), Pix e Boleto Bancário.</p>
+            <div class="fileiraBandeiras" aria-label="Bandeiras e ícones das formas de pagamento aceitas">
+                <img src="../Midia/Icones/bandeira_visa.png" alt="Bandeira da Visa" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_mastercard.png" alt="Bandeira da Mastercard" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_elo.png" alt="Bandeira da Elo" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_pix.png" alt="Ícone de Pix" class="bandeira"/>
+                <img src="../Midia/Icones/bandeira_boleto.png" alt="Ícone de boleto" class="bandeira"/>
+            </div>
+        </section>
+        <p>2025 Libris. Todos os Direitos Reservados.</p>
+        <br/><br/>
+        <p>Desenvolvido por Rayssa Chaves.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Administradores</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li><a href="home_adm.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li id="ativo"><a href="admins.html">Administradores</a></li>
+                <li><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm" id="adminsPage">
+        <section>
+            <h1>Você</h1>
+            <hr class="separador"/>
+            <br/>
+            <article class="cardAdm">
+                <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                <br/><br/>
+                <p>Samuel de Melo</p>
+                <p>samuel.adm@gmail.com</p>
+                <br/><br/>
+                <div class="display">
+                    <a href="perfil_adm.html">
+                        <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                    </a>
+                    <a href="edicaoPerfil_adm.html">
+                        <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                    </a>
+                    <a href="#popup2">
+                        <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <h1>Outros adminstradores</h1>
+            <hr class="separador"/>
+            <div class="display" id="produtosCabeçalho">
+                <p>6 administradores</p>
+                <a href="cadastro_adm.html" class="botaoPrincipal">Cadastrar novo ADM</a>
+            </div>
+            <br/>
+            <article class="display">
+                <article class="cardAdm">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                    <br/><br/>
+                    <p>Rayssa Chaves</p>
+                    <p>adm@gmail.com</p>
+                    <br/><br/>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </article>
+                <article class="cardAdm">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                    <br/><br/>
+                    <p>José Teixeira</p>
+                    <p>adm@gmail.com</p>
+                    <br/><br/>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </article>
+                <article class="cardAdm">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                    <br/><br/>
+                    <p>Lucas Perereira de Almeida</p>
+                    <p>adm@gmail.com</p>
+                    <br/><br/>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </article>
+            </article>
+            <!-- Fileira 2 -->
+            <article class="display">
+                <article class="cardAdm">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                    <br/><br/>
+                    <p>Ana Clara Silva</p>
+                    <p>adm@gmail.com</p>
+                    <br/><br/>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </article>
+                <article class="cardAdm">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                    <br/><br/>
+                    <p>Sofia Alves</p>
+                    <p>adm@gmail.com</p>
+                    <br/><br/>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </article>
+                <article class="cardAdm">
+                    <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                    <br/><br/>
+                    <p>André Barros</p>
+                    <p>adm@gmail.com</p>
+                    <br/><br/>
+                    <div class="display">
+                        <a href="">
+                            <img src="../Midia/Icones/eye-solid.svg" alt="Ícone para visualizar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/pen_icon.svg" alt="Ícone para editar" class="icon"/>
+                        </a>
+                        <a href="">
+                            <img src="../Midia/Icones/trash_icon.svg" alt="Ícone para excluir" class="icon"/>
+                        </a>
+                    </div>
+                </article>
+            </article>
+        </section>
+    </main>
+
+    <!-- POP UP DE CONFIRMAÇÃO PARA EXCLUIR CONTA -->
+    <aside class="popUp" id="popup2">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <br/>
+            <h1>Excluir conta?</h1>
+            <p>Tem certeza de que deseja excluir esta conta de administrador?</p>
+            <br/>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="#popup1" class="botaoPrincipal">Sim</a>
+                <a href="admins.html" class="botao2">Não</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- POP UP DE EXCLUSÃO DA CONTA -->
+    <aside class="popUp" id="popup1">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <br/>
+            <h1>Conta excluída</h1>
+            <p>A conta foi excluída, você não terá mais acesso à administração da Libris.</p>
+            <br/>
+            <div class="display" aria-label="Botões de açaão">
+                <a href="index.html" class="botaoPrincipal">Ok</a>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>

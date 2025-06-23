@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Login Adm</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="semNav" id="fundoPreto">
+        <a href="">
+            <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+        </a>
+    </header>
+
+    <!-- CANCELAR -->
+    <nav class="caminho">
+            <ul class="setasInvertidas">
+                <li><a href="admins.html" class="link">Cancelar</a></li>
+            </ul>
+        </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoForms">
+        <!-- Formulário -->
+        <form action="#popup2" class="formsLogin" id="formsCadastro" aria-label="Formulário de Cadastro">
+            <h1>Cadastre um novo ADM!</h1>
+            <br/>
+            <p class="alert">
+                <img src="../Midia/Icones/alert_icon.svg" alt="Alerta" class="icon"/>
+                A senha deve conter no mínimo 08 caracteres.
+            </p>
+            <section aria-label="Nome e sobrenome">
+                <fieldset>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Digite o primeiro nome" required/>
+                </fieldset>
+                <fieldset>
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" name="sobrenome" placeholder="Digite o sobrenome" required/>
+                </fieldset>
+            </section>
+            <section aria-label="Email e CPF">
+                <fieldset>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="Digite o e-mail" required/>
+                </fieldset>
+                <fieldset>
+                    <label for="tel">Telefone para contato</label>
+                    <input type="tel" name="tel" placeholder="Digite o n° do telefone" required/>
+                </fieldset>
+            </section>
+            <section aria-label="Senha e confirmação da senha">
+                <fieldset>
+                    <label for="senha">Senha</label>
+                    <input type="password" minlength="8" name="senha" placeholder="Crie uma senha" required/>
+                </fieldset>
+                <fieldset>
+                    <label for="confirmarSenha">Confirme a senha</label>
+                    <input type="password" minlength="8" name="confirmarSenha" placeholder="Digite a senha novamente" required/>
+                </fieldset>
+            </section>
+            <input type="submit" value="Cadastrar" class="botaoPrincipal"/>
+        </form>
+        <!-- Ilustração -->
+        <aside class="ilustracao" id="ilustracao2">
+            <img src="../Midia/Ilustraçoes/img_fundo4.png" alt="Ilustração de menino em cima de uma pilha de livros acenando"/>
+        </aside>
+    </main>
+
+    <!-- POP UP -->
+    <aside class="popUp" id="popup2">
+        <div class="popupConteudo" aria-label="Mensagem pop up">
+            <img src="../Midia/Icones/circle-check_icon.svg" alt="Ícone de check"/>
+            <h1>Novo administrador cadastrado!</h1>
+            <p>Um novo admistrador foi cadastrado e poderá ter acesso à administração da Libris.</p>
+            <a href="admins.html" class="botaoPrincipal">Ok</a>
+        </div>
+    </aside>
+</body>
+</html>

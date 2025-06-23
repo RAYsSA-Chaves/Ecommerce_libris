@@ -52,7 +52,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="cpf">CPF (somente números)</label>
-                    <input type="number" minlength="14" name="cpf" placeholder="Digite seu CPF" required/>
+                    <input type="text" inputmode="numeric" pattern="\d{11}" maxlength="11" name="cpf" placeholder="Digite seu CPF" title="Digite apenas os 11 números do CPF" required/>
                 </fieldset>
             </section>
             <section aria-label="Senha e confirmação da senha">

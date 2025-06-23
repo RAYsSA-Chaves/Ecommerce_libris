@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Libris | Home Adm</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="icon" type="image/png" href="../Midia/Logo/favicon.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"/> <!-- importando a fonte -->
+</head>
+<body class="paginaAdm">
+    <!-- CABEÇALHO -->
+    <header class="menuVertical">
+        <nav>
+            <ul>
+                <li class="centro">
+                    <a href="home_adm.html">
+                        <img src="../Midia/Logo/logo_light.png" alt="Logo da Libris"/>
+                    </a>
+                </li>
+                <li id="ativo"><a href="home_adm.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="admins.html">Administradores</a></li>
+                <li><a href="config_adm.html">Configurações</a></li>
+                <hr/>
+                <li class="centro"><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudoAdm">
+        <section>
+            <article class="display">
+                <img src="../Midia/Icones/user_img.png" alt="Foto de perfil" class="perfilAdm"/>
+                <div>
+                    <h1>Olá, ADM!</h1>
+                    <p>Acompanhe o desempenho da Libris!</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="display">
+            <article class="display">
+                <h1>8K</h1>
+                <p>usuários cadastrados</p>
+            </article>
+            <article class="display">
+                <h1>2K</h1>
+                <p>vendas este este mês</p>
+            </article>
+            <article class="display">
+                <h1>0</h1>
+                <p>pedidos devolvidos este mês</p>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Mais vendidos este mês</h1>
+                <article class="display">
+                    <article>
+                        <img src="../Midia/Produtos/livro_asasReluzentes.jpg" alt="Livro Asas Reluzentes" class="iconLivro"/>
+                        <p>Asas Reluzentes</p>
+                        <p><strong>591</strong></p>
+                    </article>
+                    <article>
+                        <img src="../Midia/Produtos/hq_invencivel.jpg" alt="HQ Invencível, volume 1" class="iconLivro"/>
+                        <p>Invencível, vol. 1</p>
+                        <p><strong>407</strong></p>
+                    </article>
+                    <article>
+                        <img src="../Midia/Produtos/livro_assimQueAcaba.jpg" alt="Livro É Assim que Acaba, volume 1" class="iconLivro"/>
+                        <p>É Assim que Acaba, vol. 1</p>
+                        <p><strong>346</strong></p>
+                    </article>
+                </article>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Vendas mensais</h1>
+                <select name="filtroAno" id="filtroAno" class="filtroAdm">
+                    <option value="2025">2025</option>
+                    <option value="2025">2024</option>
+                    <option value="2025">2023</option>
+                    <option value="2025">2022</option>
+                    <option value="2025">2021</option>
+                </select>
+                <img src="../Midia/graficos/grafico_geral1.png" alt="Gráfico de barras com vendas mensais de 2025" class="grafico"/>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h1>Comparativo de vendas anuais</h1>
+                <p>(últimos 4 anos)</p>
+                <br/><br/>
+                <img src="../Midia/graficos/grafico_geral2.png" alt="Gráfico de linhas com vendas mensais de 2022-2025" class="grafico"/>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
