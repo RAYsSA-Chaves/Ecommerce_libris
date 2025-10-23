@@ -11,7 +11,7 @@ Libris é um e-commerce de livros, quadrinhos e mangás, cuja proposta é oferec
 Criar um site de comércio eletrônico que seja:
 - Acessível
 - Desenvolvido com HTML semântico
-- Intuitivo, atrativo e funcional, mesmo sem JavaScript
+- Intuitivo e atrativo
 - Divido claramente entre fluxos do usuário e do administrador
 - Um projeto puramente Front-End, simulando navegação entre páginas com base em links HTML e estilização CSS.
 <br/><br/>
@@ -22,7 +22,7 @@ O fluxo inicial do usuário comum (deslogado) encontra-se na pasta principal do 
 
 O fluxo do usuário logado localiza-se na pasta "User_logado", o index desse fluxo também é a Home Page da Libris, porém com algumas modificações e páginas de navegação adicionais para este usuário - por exemplo, "Meus Pedidos", "Meus Favoritos", "Perfil". 
 
-Já o fluxo do adminstrador se encontra na pasta "Adm_Flow" e o seu index é o login, com o objetivo de garantir segurança para o ambiente administrativo, permitindo acesso somente ao pessoal autorizado (administradores cadastrados).
+Já o fluxo do adminstrador se encontra na pasta "Adm_Flow" e o seu index é o login, com o objetivo de garantir segurança para o ambiente administrativo.
 <br/><br/>
 ## Protótipo
 O projeto foi previamente prototipado no **Figma**, sendo desenvolvidos os fluxos principais dos usuários e administradores.
